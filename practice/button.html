@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BUTTON</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        .btn {
+            padding: 15px 20px;
+            background-color: rgb(230, 223, 223);
+            margin: 180px;
+            float: left;
+            display: block;
+            border: none;
+            transition: all ease-in-out 0.5s;
+            flex-wrap: wrap;
+        }
+
+        .btn1:hover {
+            background-color: blue;
+            color: white;
+        }
+
+        .btn2 {
+            background-color: red;
+            color: black;
+        }
+
+        .btn2:hover {
+            background-color: black;
+            color: red;
+            border-radius: 50%;
+        }
+
+        .btn3:hover {
+            background-color: blue;
+            color: azure;
+            outline: 5px dotted pink;
+            outline-offset: 2px;
+        }
+
+        .btn4 {
+            background: linear-gradient(90deg, rgba(42, 123, 155, 1) 0%, rgba(87, 199, 133, 1) 50%, rgba(194, 181, 66, 1) 100%);
+        }
+
+        .btn4:hover {
+            color: white;
+            background-position: 93px;
+        }
+
+        .btn5:hover {
+            background-color: black;
+            color: red;
+            outline-offset: -15px;
+            outline: 3px solid red;
+        }
+
+        .btn6 {
+            background: linear-gradient(90deg, rgba(255, 0, 0, 1) 0%, rgba(255, 125, 125, 1) 50%, rgb(255, 236, 236) 100%);
+        }
+
+        .btn6:hover {
+            background: linear-gradient(90deg, rgba(255, 255, 255, 1) 0%, rgba(255, 125, 125, 1) 50%, rgba(255, 0, 0, 1) 100%);
+            border-radius: 0px 40px 0px 40px;
+        }
+
+        .btn7:hover {
+            background-color: red;
+            border-radius: 0px 0px 40px 40px;
+        }
+
+        .btn8 {
+            background-color: chartreuse;
+            color: rgb(255, 255, 255);
+        }
+
+        .btn8:hover {
+            background-color: rgb(47, 95, 0);
+        }
+
+        .btn9 {
+            background: linear-gradient(0deg, rgba(36, 24, 0, 1) 0%, rgba(121, 71, 9, 1) 35%, rgba(255, 204, 0, 1) 100%);
+            color: #FFEFAD;
+            border-radius: 0px 0px 12px 12px;
+            border-radius: 12px 12px 0px 0px;
+        }
+
+        .btn9:hover {
+            background: linear-gradient(180deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 35%, rgba(0, 212, 255, 1) 100%);
+            color: aliceblue;
+            border-radius: 0px 0px 12px 12px;
+            background-position: 360px;
+        }
+
+        .btn10 {
+           background-color: white ;
+           color: grey;
+        }
+
+        .btn10:hover {
+            color: white;
+            border: 4px dotted transparent;
+            border-image: linear-gradient(to top, rgb(0, 0, 0), rgb(56, 56, 56),rgb(126, 126, 126),rgb(203, 203, 203),rgb(255, 255, 255))0.5;
+            border-radius: 12px 12px 12px 12px;
+            background-image: url(../practice/imagepra/batman.jpg);
+            background-position: 4995px;
+
+        }
+
+        .btn11 {
+            outline: 10px solid rgb(252, 145, 145);
+            background-color: white;
+        }
+
+        .btn11:hover {
+            outline-offset: -10px;
+            outline-color: rgb(255, 68, 68);
+            background-color: black;
+            outline-style: groove;
+            color: white;
+        }
+
+        .btn12 {
+            outline: 7px dashed pink;
+            background-color: rgb(250, 169, 183);
+        }
+
+        .btn12:hover {
+            outline: 7px dotted white;
+            outline-offset: -5px;
+            background-color: pink;
+        }
+
+        .btn13 {
+            outline: 7px solid rgba(0, 220, 84, 0.541);
+            background-image: url(../practice/imagepra/leaf.jpg);
+        }
+
+        .btn13:hover {
+            outline: 7px dotted rgba(0, 142, 54, 0.543);
+            color: white;
+            border-radius: 12px 12px 12px 12px;
+            background-position: 150px;
+        }
+
+        .btn14 {
+            background-color: beige;
+            color: rgb(172, 58, 58);
+            text-transform: lowercase;
+        }
+
+        .btn14:hover {
+            border-left: 3px dotted black;
+            border-right: 3px dotted black;
+            border-radius: 3px 3px 3px 3px;
+            text-transform: uppercase;
+            text-shadow: 0px 8px 5px #000000;
+        }
+
+        .btn15 {
+            background-color: rgb(0, 255, 251);
+            color: rgb(0, 0, 0);
+            outline: 3px solid black;
+            letter-spacing: 5px;
+        }
+
+        .btn15:hover {
+            letter-spacing: 0px;
+            border: 3px dashed black;
+            outline-offset: -15px;
+            outline: 3px dashed black;
+        }
+
+        .btn16 {
+            color: black;
+            background-color: red;
+        }
+
+        .btn16:hover {
+            color: red;
+            background-color: black;
+            border-radius: 35px 35px 0px 35px;
+        }
+
+        .btn17 {
+            background-color: rgb(250, 169, 183);
+        }
+
+        .btn17:hover {
+            outline: 7px white;
+            outline-style: groove;
+            outline-offset: -5px;
+            border-radius: 35px 35px 35px 35px;
+            color: white;
+            background-color: pink;
+        }
+
+        .btn18 {
+            background: linear-gradient(90deg, rgba(8, 0, 255, 1) 47%, rgba(255, 0, 0, 1) 47%);
+            color: white;
+        }
+
+        .btn18:hover {
+            outline: 2px white;
+            color: black;
+            outline-style: solid;
+            border-radius: 35px 35px 35px 35px;
+            background: linear-gradient(90deg, rgba(255, 0, 0, 1) 47%, rgba(8, 0, 255, 1) 47%);
+        }
+
+        .btn19 {
+            background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(255, 0, 0, 1) 100%);
+            border-radius: 70px 0px 70px 0px;
+            color: #993131;
+            outline: 2px dotted #ffa1a1;
+            outline-offset: 10px;
+            border: dotted;
+        }
+
+        .btn19:hover {
+            border-radius: 0px 70px 0px 70px;
+            color: #004C5C;
+            outline: 2px dotted #A1EFFF;
+            outline-offset: 10px;
+            border: dotted;
+            background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(0, 212, 255, 1) 100%);
+        }
+
+        .btn20 {
+            background: linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgba(142, 250, 0, 1) 80%);
+            color: rgba(142, 250, 0, 1)
+        }
+
+        .btn20:hover {
+            background: linear-gradient(180deg, rgba(142, 250, 0, 1) 0%, rgba(0, 0, 0, 1) 54%);
+            color: white;
+            box-shadow: 0px 0px 30px rgb(0, 111, 2);
+        }
+
+        .btn21 {
+            background: linear-gradient(90deg, rgba(255, 125, 125, 1) 50%, rgba(207, 255, 145, 1) 0%);
+            color: black;
+            outline: 7px dotted #FFEF73;
+            letter-spacing: -6px;
+            outline-offset: -4px;
+            border-radius: 100px 100px 100px 100px;
+        }
+
+        .btn21:hover {
+            background: linear-gradient(90deg, rgba(255, 125, 125, 1) 0%, rgba(207, 255, 145, 1) 75%);
+            color: black;
+            letter-spacing: 1px;
+            outline-offset: 6px;
+            outline: 7px #FFEF73;
+            outline-style: dashed;
+            border-radius: 100px 100px 100px 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <button class="btn btn1">
+        Submit 1
+    </button>
+    <button class="btn btn2">
+        Submit 2
+    </button>
+    <button class="btn btn3">
+        Submit 3
+    </button>
+    <button class="btn btn4">
+        Submit 4
+    </button>
+    <button class="btn btn5">
+        Submit 5
+    </button>
+    <button class="btn btn6">
+        Submit 6
+    </button>
+    <button class="btn btn7">
+        Submit 7
+    </button>
+    <button class="btn btn8">
+        Submit 8
+    </button>
+    <button class="btn btn9">
+        Submit 9
+    </button>
+    <button class="btn btn10">
+        Submit 10
+    </button>
+    <button class="btn btn11">
+        Submit 11
+    </button>
+    <button class="btn btn12">
+        Submit 12
+    </button>
+    <button class="btn btn13">
+        Submit 13
+    </button>
+    <button class="btn btn14">
+        Submit 14
+    </button>
+    <button class="btn btn15">
+        Submit 15
+    </button>
+    <button class="btn btn16">
+        Submit 16
+    </button>
+    <button class="btn btn17">
+        Submit 17
+    </button>
+    <button class="btn btn18">
+        Submit 18
+    </button>
+    <button class="btn btn19">
+        Submit 19
+    </button>
+    <button class="btn btn20">
+        Submit 20
+    </button>
+    <button class="btn btn21">
+        Submit 21
+    </button>
+</body>
+
+</html>

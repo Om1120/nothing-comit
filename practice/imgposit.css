@@ -1,0 +1,159 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+h1{
+    margin-top: 20px;
+    font-size: 40px;
+}
+.main{
+    height: 100%;
+    width: 100vh;
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 100px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.box{
+    position: relative;
+}
+.box h3{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    color: white;
+    width: 300px;
+    z-index: 1;
+    text-align: center;
+    opacity: 0;
+    transition: 0.3s ease;
+}
+.box:hover h3{
+    opacity: 1;
+    bottom: -30px;
+    color: black;
+}
+figure{
+    width: 300px;
+    height: 200px;
+    overflow: hidden;
+}
+img{
+    width: 300px;
+    height: 200px;
+}
+.zoom,
+.zoom1{
+    display: flex;
+    width: 100%;
+    height: 200px;
+    justify-content: space-evenly;
+}
+
+
+.zoom1 div img{
+    transition: transform 0.5s ease-in-out;
+}
+
+.zoom1 div:hover img{
+    transform: scale(1.2);
+}
+.zoom2{
+    display: flex;
+    width: 100%;
+    height: 200px;
+    justify-content: space-evenly;
+}
+.zoom2 div img{
+    transition: transform 0.5s ease-in-out;
+    transform: scale(1.5);
+    transform-origin: center;
+}
+.zoom2 div:hover img{
+    transform: scale(1);
+}
+.zoom3{
+    display: flex;
+    width: 100%;
+    height: 200px;
+    justify-content: space-evenly;
+}
+.zoom3 div img{
+    transition: transform 0.5s ease-in-out;
+    transform: scale(1);
+    transform-origin: center;
+}
+.zoom3 div:hover img{
+    transform: scale(1.2);
+    transform-origin: left top;
+}
+.zoom4{
+    display: flex;
+    width: 100%;
+    height: 200px;
+    justify-content: space-evenly;
+}
+.zoom4 div img{
+    transition: transform 0.5s ease-in-out;
+    transform: scale(1.2);
+    transform-origin: left top;
+}
+.zoom4 div:hover img{
+    transform: scale(1);
+}
+.zoom5{
+    display: flex;
+    width: 100%;
+    height: 200px;
+    justify-content: space-evenly;
+}
+.zoom5 div img{
+    transition: transform 0.9s ease-in-out;
+    transform: scale(1.2);
+    transform-origin: left;
+}
+.zoom5 div:hover img{
+    transform-origin: center;
+   
+}
+.zoom6{
+    display: flex;
+    width: 100%;
+    height: 200px;
+    justify-content: space-evenly;
+}
+.zoom6 div img{
+    transition: transform 0.9s ease-in-out;
+    transform: rotate(15deg) scale(1.4);
+}
+.zoom6 div:hover img{
+   transform: rotate(0) scale(1);
+}
+.zoom7{
+    display: flex;
+    width: 100%;
+    height: 200px;
+    justify-content: space-evenly;
+}
+.zoom7 div img{
+    transition: transform 0.9s ease-in-out;
+   filter: blur(3px);
+}
+.zoom7 div:hover img{
+    filter: blur(0);
+}
+.zoom8{
+    display: flex;
+    width: 100%;
+    height: 200px;
+    justify-content: space-evenly;
+}
+.zoom8 div img{
+    transition: transform 2s ease-in-out;
+   filter: grayscale(100%);
+}
+.zoom8 div:hover img{
+    filter: grayscale(0%);
+}

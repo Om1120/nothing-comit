@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Website</title>
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="../css/bootstrap.min.css">
+
+  
+  <!-- website code -->
+   <!-- https://dreamingtheme.kiendaotac.com/ -->
+
+
+  <style>
+    body {
+      margin: 0;
+    }
+
+    /* Upper bar */
+    .upper {
+      background-color: whitesmoke;
+      padding: 8px 20px;
+      font-size: 14px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .upper a {
+      color: black;
+      text-decoration: none;
+    }
+
+    /* Carousel image height */
+    .carousel-item img {
+      height: 500px;
+      object-fit: cover;
+      width: auto;
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- ===== Upper Bar ===== -->
+<div class="upper">
+  <span>Welcome to our online store!</span>
+
+  <div class="d-flex align-items-center gap-3">
+    <div class="dropdown">
+      <button class="btn btn-light dropdown-toggle border" data-bs-toggle="dropdown">
+        English (USD)
+      </button>
+      <ul class="dropdown-menu">
+        <li><a class="dropdown-item" href="#">French (EUR)</a></li>
+        <li><a class="dropdown-item" href="#">Japanese (JPY)</a></li>
+      </ul>
+    </div>
+
+    <a href="#">Login | Register</a>
+  </div>
+</div>
+
+<!-- ===== Search + Logo + Profile ===== -->
+<nav class="navbar bg-white border-bottom py-3">
+  <div class="container">
+    <div class="row w-100 align-items-center">
+
+      <!-- Search -->
+      <div class="col-4">
+        <form class="d-flex">
+          <input class="form-control me-2" type="search" placeholder="Search">
+          <button class="btn btn-outline-success">Search</button>
+        </form>
+      </div>
+
+      <!-- Logo -->
+      <div class="col-4 text-center">
+        <a class="navbar-brand" href="#">
+          <img src="../img/logo.png" width="171" height="53" alt="Logo">
+        </a>
+      </div>
+
+      <!-- Profile -->
+      <div class="col-4 text-end">
+        <button class="btn btn-primary position-relative">
+          Profile
+          <span class="position-absolute top-0 start-100 translate-middle p-2 bg-danger rounded-circle"></span>
+        </button>
+      </div>
+
+    </div>
+  </div>
+</nav>
+
+<!-- ===== Menu Navbar ===== -->
+<nav class="navbar navbar-expand-lg navbar-light bg-body-tertiary">
+  <div class="container">
+
+    <!-- Mobile Toggle -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Menu -->
+    <div class="collapse navbar-collapse" id="mainMenu">
+      <ul class="navbar-nav mx-auto">
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">HOME</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Home 1</a></li>
+            <li><a class="dropdown-item" href="#">Home 2</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">SHOP</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Shop Grid</a></li>
+            <li><a class="dropdown-item" href="#">Shop List</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">PAGES</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">About Us</a></li>
+            <li><a class="dropdown-item" href="#">Contact</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">BLOG</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Blog Grid</a></li>
+            <li><a class="dropdown-item" href="#">Blog Single</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="#">ABOUT</a>
+        </li>
+
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- ===== Carousel ===== -->
+<div id="carouselExampleDark" class="carousel carousel-dark slide">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+  <div class="carousel-inner ">
+    <div class="carousel-item active" data-bs-interval="10000">
+      <img src="../img/slider-thumb-full-1.jpg" class="d-block w-100" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>SELL</h5>
+        <p>50% OFF</p>
+      </div>
+    </div>
+    <div class="carousel-item" data-bs-interval="2000">
+      <img src="../img/slider-thumb-full-2.jpg" class="d-block w-100" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Second slide label</h5>
+        <p>Some representative placeholder content for the second slide.</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="../img/slider-thumb-full-3.jpg" class="d-block w-100" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Third slide label</h5>
+        <p>Some representative placeholder content for the third slide.</p>
+      </div>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
+<!-- Bootstrap JS -->
+<script src="../js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
+

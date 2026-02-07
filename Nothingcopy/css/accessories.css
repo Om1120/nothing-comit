@@ -1,0 +1,213 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* FULL HEIGHT LAYOUT */
+html, body {
+    height: 100%;
+}
+
+/* BODY FLEX */
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+/* HEADER */
+.header-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+    background-color: white;
+}
+a{
+    color: black;
+    text-decoration: none;
+}
+a:hover{
+     color: skyblue;
+    transition: all ease-in-out 0.5s;
+}
+
+.logo {
+    font-family: "Bitcount Prop Single", system-ui;
+    font-size: 32px;
+}
+.logo a:hover{
+    color: rgb(255, 0, 0);
+    transition: all ease-in-out 0.5s;
+}
+
+/* Navigation */
+.nav {
+    display: flex;
+    gap: 24px;
+}
+
+/* Links */
+.nav-link {
+    font-family: "Bitcount Prop Single", system-ui;
+    font-size: 28px;
+    text-decoration: none;
+    color: black;
+}
+
+/* TITLE */
+.intro {
+    font-family: "Bitcount Prop Single", system-ui;
+    font-size: 42px;
+    text-align: center;
+    margin-top: 100px;
+    margin-bottom: 10px;
+}
+.intro a:hover{
+    color: rgb(248, 194, 56);
+    transition: all ease-in-out 0.5s;
+}
+
+/* PRODUCT SECTION */
+.setup {
+    flex: 1; /* IMPORTANT: pushes footer to bottom */
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    align-items: center;
+    font-family: "Bitcount Prop Single", system-ui;
+    text-align: center;
+    flex-wrap: wrap;
+}
+
+/* PRODUCT BOX */
+.box {
+    width: 20%;
+    height: 400px;
+}
+
+.box img {
+    width: 100%;
+    height: 310px;
+    filter: grayscale(10%);
+}
+.box img:hover {
+    transform: scale(1.10);
+    filter: grayscale(0%);
+    transition: all ease-in-out 0.1s;
+}
+/* FOOTER */
+.footer {
+    background: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: auto; /* keeps footer at bottom */
+}
+
+/* FOOTER LINKS */
+.footer-menu a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    font-size: 26px;
+    letter-spacing: 3px;
+    margin: 20px;
+    text-align: center;
+    font-family: "Bitcount Prop Single", system-ui;
+}
+.footer-menu a:hover {
+    color: skyblue;
+    text-shadow: 0px 0px 3px white;
+    transition: all ease-in-out 0.5s;
+}
+.text43{
+    color: rgb(255, 255, 255);
+}
+.text43:hover {
+    color: #b4b4b5;
+    transition: all ease-in-out 0.5s;
+    
+}
+.text44{
+    color: rgb(255, 255, 255);
+}
+.text44:hover {
+    color: #b4b4b5;
+    transition: all ease-in-out 0.5s;
+    
+}
+.text45{
+    color: rgb(255, 255, 255);
+}
+.text45:hover {
+    color: #8C9091;
+    transition: all ease-in-out 0.5s;
+    
+}
+.text46{
+    color: rgb(255, 255, 255);
+}
+.text46:hover {
+    color: #8C9091;
+    transition: all ease-in-out 0.5s;
+    
+}
+.text47{
+    color: rgb(255, 255, 255);
+}
+.text47:hover {
+    color: #8C9091;
+    transition: all ease-in-out 0.5s;
+    
+}
+.text48{
+    color: rgb(255, 255, 255);
+}
+.text48:hover {
+    color: #183C6D;
+    transition: all ease-in-out 0.5s;
+    
+}
+.text49{
+    color: rgb(255, 255, 255);
+}
+.text49:hover {
+    color: #070f1a;
+    transition: all ease-in-out 0.5s;
+    
+}
+.text50{
+    color: rgb(255, 255, 255);
+}
+.text50:hover {
+    color: #8f989d;
+    transition: all ease-in-out 0.5s;
+    
+}
+.text51{
+    color: rgb(255, 255, 255);
+}
+.text51:hover {
+    color: #8f989d;
+    transition: all ease-in-out 0.5s;
+    
+}
+.text52{
+    color: rgb(255, 255, 255);
+}
+.text52:hover {
+    color: #2E3843;
+    transition: all ease-in-out 0.5s;
+    
+}
+.text53{
+    color: rgb(255, 255, 255);
+}
+.text53:hover {
+    color: #2E3843;
+    transition: all ease-in-out 0.5s;
+    
+}

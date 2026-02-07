@@ -1,0 +1,145 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 60px;
+    height: 80px;
+    background: #dbb53a;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.logo {
+    width: 240px;
+}
+
+.menu ul {
+    list-style: none;
+    display: flex;
+}
+
+.menu li {
+    position: relative;
+}
+
+.menu li a {
+    text-decoration: none;
+    padding: 30px 15px;
+    color: white;
+    font-size: 14px;
+}
+
+.menu li a:hover {
+    color: #ffec41;
+}
+
+
+.mega-menu {
+    height: 850px;
+    position: absolute;
+
+    left: -600px;
+    top: 55px;
+    width: 1100px;
+    background: #4d518c;
+    display: none;
+    padding: 30px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.25);
+    transition: all 0.6s ease;
+}
+
+.mega:hover>.mega-menu {
+    display: flex;
+
+}
+
+.mega-column {
+    flex: 1;
+    padding: 10px 12px;
+    border-right: 1px solid #ddd;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.mega-column:last-child {
+    border-right: none;
+}
+
+.mega-column h4 {
+    margin-bottom: 5px;
+    font-size: 15px;
+    color: white;
+}
+
+.mega-column li a {
+    display: block;
+    padding: 10px 0;
+    font-size: 14px;
+    color: white;
+}
+
+.mega-column a:hover {
+    color: #FFBC06;
+}
+
+.petamenu {
+
+    top: 55px;
+    left: 0;
+    min-width: 180px;
+    font-size: 14px;
+    padding-right: 75px;
+    flex-direction: column;
+    background-color: #4d518c;
+    display: none;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.25);
+    transition: all 0.6s ease;
+}
+
+.petamenu li {
+    padding: 10px 20px;
+    white-space: nowrap;
+}
+
+.menu-3 ul {
+    position: absolute;
+    display: none;
+}
+
+.menu-3:hover>.petamenu {
+    display: flex;
+}
+
+.petamenu-2 {
+    min-width: 200px;
+    top: 55px;
+    left: 0px;
+    font-size: 14px;
+    display: none;
+    flex-direction: column;
+    background-color: #4d518c;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.25);
+    transition: all 0.6s ease;
+
+}
+
+.menu-5 ul {
+    display: none;
+    position: absolute;
+}
+
+.menu-5:hover>.petamenu-2 {
+    display: flex;
+}
+
+.petamenu-2 li {
+    padding: 10px;
+
+}

@@ -1,0 +1,46 @@
+.header{
+    width: auto;
+    height: 80px;
+    background-color: #003366;
+    margin: auto;
+}
+
+li{
+    list-style: none;
+}
+
+.menu{
+    display: flex;
+    list-style: none;
+    justify-content: center;
+}
+a{
+    text-decoration: none;
+}
+.menu a{
+    color: white;
+    font-size: 20px;
+}
+
+.menu li{
+    padding: 10px 20px;
+    position: relative;
+}
+
+.submenu li{
+    padding: 10px 20px;
+}
+.menu li a:hover{
+    color: burlywood;
+}
+.submenu{
+    background-color: grey;
+    position: absolute;
+    top:100%;
+    left: 0%;
+    display: none;
+    white-space: nowrap;
+}
+.menu li:hover .submenu{
+    display: block;
+}

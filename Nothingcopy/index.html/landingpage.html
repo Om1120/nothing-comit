@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NOTHING</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Bitcount+Prop+Single:wght@100..900&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Bitcount Prop Single", system-ui;
+        }
+
+        /* ---------- NAVBAR ---------- */
+        .navbar {
+            background-color: black;
+            padding: 8px 0;
+        }
+
+        .navbar-brand {
+            color: #801f29 !important;
+            font-size: 32px;
+        }
+
+        .navbar-brand:hover {
+            color: red !important;
+            transition: 0.5s;
+        }
+
+        .nav-link {
+            font-size: 22px;
+            color: rgb(52, 80, 91) !important;
+            margin-left: 20px;
+        }
+
+        .nav-link:hover {
+            color: skyblue !important;
+            transition: 0.5s;
+        }
+
+        /* ---------- SECTIONS ---------- */
+        .mainback {
+            width: 100%;
+            height: 100vh;
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .mainhead {
+            font-weight: 300;
+            font-size: 48px;
+            text-align: center;
+        }
+
+        /* ---------- TEXT COLORS ---------- */
+        .pah1 { color: #fff; }
+        .pah1:hover { color: #266881; text-shadow: 0 0 6px #414141; }
+
+        .pah2 { color: grey; }
+        .pah2:hover { color: #AF2330; text-shadow: 0 0 6px #5e1119; }
+
+        .pah3 { color: #B6CCDA; }
+        .pah3:hover { color: #BD4143; text-shadow: 0 0 6px rgb(40,7,10); }
+
+        .pah4 { color: rgb(183,182,182); }
+        .pah4:hover { color: #062F37; text-shadow: 0 0 6px #1a9fb9; }
+
+        .pah5 { color: black; }
+        .pah5:hover { color: #F17786; text-shadow: 0 0 6px #91474f; }
+
+        .pah6 { color: #ffd4a3; }
+        .pah6:hover { color: #C43F2C; text-shadow: 0 0 6px #ea7664; }
+
+        .pah7 { color: #ff3300; }
+        .pah7:hover { color: #9AA6B2; text-shadow: 0 0 6px #3777b6; }
+
+        .mainhead:hover {
+            transition: all ease-in-out 0.9s;
+        }
+
+        /* ---------- BACKGROUNDS ---------- */
+        .page1 { background-image: url(../img/landingpage1.avif); }
+        .page2 { background-image: url(../img/landingpage2.avif); }
+        .page3 { background-image: url(../img/landingpage3.avif); }
+        .page4 { background-image: url(../img/landingpage4); }
+        .page5 { background-image: url(../img/landingpage5.avif); }
+        .page6 { background-image: url(../img/landingpage6.avif); }
+        .page7 { background-image: url(../img/landingpage7.avif); }
+
+        /* ---------- FOOTER ---------- */
+        footer {
+            min-height: 100vh;
+            background: black;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .footer-menu a {
+            display: block;
+            font-size: 26px;
+            letter-spacing: 3px;
+            margin: 18px 0;
+            color: white;
+            text-decoration: none;
+        }
+
+        .footer-menu a:hover {
+            color: skyblue;
+            text-shadow: 0 0 3px white;
+            transition: 0.5s;
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <div class="container">
+        <a class="navbar-brand" href="#">NOTHING</a>
+
+        <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navMenu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse justify-content-end" id="navMenu">
+            <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link" href="#">HOME</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">ABOUT</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">LOGIN</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- SECTIONS -->
+<section class="mainback page1"><h1 class="mainhead pah1">Nothing Phone (3)</h1></section>
+<section class="mainback page2"><h1 class="mainhead pah2">Nothing Headphone (1)</h1></section>
+<section class="mainback page3"><h1 class="mainhead pah3">Nothing Phone (3a) Lite</h1></section>
+<section class="mainback page4"><h1 class="mainhead pah4">Nothing Phone (3a) Pro</h1></section>
+<section class="mainback page5"><h1 class="mainhead pah5">Nothing Phone 3a</h1></section>
+<section class="mainback page6"><h1 class="mainhead pah6">CMF Phone 2 Pro</h1></section>
+<section class="mainback page7"><h1 class="mainhead pah7">CMF Buds Pro 2</h1></section>
+
+<!-- FOOTER -->
+<footer>
+    <div class="footer-menu text-center">
+        <a href="http://127.0.0.1:5500/Nothingcopy/index.html/shopall.html">SHOP ALL</a>
+        <a href="">PHONES</a>
+        <a href="">AUDIO</a>
+        <a href="">WATCHES</a>
+        <a href="">ACCESSORIES</a>
+        <a href="">CMF</a>
+    </div>
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,88 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+body {
+    background: white;
+}
+
+.navbar {
+    background: #000A6B;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+}
+
+.menu li {
+    position: relative;
+}
+
+.menu a {
+    text-decoration: none;
+    color: white;
+    padding: 8px 10px;
+    display: block;
+}
+.menu a:hover {
+    color: #FFBF00;
+    transition: all 0.3s ease-in-out;
+}
+.dropdown-menu {
+    position: absolute;
+    top: 40px;
+    left: 0;
+    background: #00466B;
+    list-style: none;
+    width: 220px;
+    display: none;
+}
+.dropdown-menu :hover{
+    transition: all 0.3s ease-in-out;
+}
+.dropdown-menu li a {
+    color: white;
+    padding: 12px 16px;
+}
+
+.dropdown-menu li a:hover {
+    color: #FFFFD6;
+    transition: all 0.3s ease-in-out;
+}
+.dropdown:hover .dropdown-menu {
+    display: block;
+    transition: all 0.3s ease-in-out;
+}
+
+.dropdown-right {
+    position: relative;
+}
+
+.dropdown-menu-right {
+    position: absolute;
+    top: 0;
+    right: 100%;
+    background: #00466B;
+    list-style: none;
+    width: 220px;
+    display: none;
+}
+
+.dropdown-menu-right li a {
+    color: white;
+    padding: 12px 16px;
+}
+
+.dropdown-right:hover .dropdown-menu-right {
+    display: block;
+    transition: all 0.3s ease-in-out;
+}
+

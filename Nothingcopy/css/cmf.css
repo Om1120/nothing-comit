@@ -1,0 +1,299 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+.header-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+    background-color: white;
+}
+a{
+    color: black;
+    text-decoration: none;
+}
+a:hover{
+     color: skyblue;
+    transition: all ease-in-out 0.5s;
+}
+
+.logo {
+    font-family: "Bitcount Prop Single", system-ui;
+    font-size: 32px;
+}
+.logo a:hover{
+    color: rgb(255, 0, 0);
+    transition: all ease-in-out 0.5s;
+}
+
+.nav {
+    display: flex;
+    gap: 24px;
+}
+
+.nav-link {
+    font-family: "Bitcount Prop Single", system-ui;
+    font-size: 28px;
+    text-decoration: none;
+    color: black;
+}
+
+.intro {
+    font-family: "Bitcount Prop Single", system-ui;
+    font-size: 42px;
+    text-align: center;
+    margin-top: 100px;
+    margin-bottom: 10px;
+}
+.intro a:hover{
+    color: rgb(248, 194, 56);
+    transition: all ease-in-out 0.5s;
+}
+
+.setup {
+    flex: 1;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    align-items: center;
+    font-family: "Bitcount Prop Single", system-ui;
+    text-align: center;
+    flex-wrap: wrap;
+}
+
+.box {
+    width: 20%;
+    height: 400px;
+}
+
+.box img {
+    width: 100%;
+    height: 310px;
+    filter: grayscale(10%);
+}
+.box img:hover {
+    transform: scale(1.10);
+    filter: grayscale(0%);
+    transition: all ease-in-out 0.1s;
+}
+
+.footer {
+    background: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: auto;
+}
+
+.footer-menu a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    font-size: 26px;
+    letter-spacing: 3px;
+    margin: 20px;
+    text-align: center;
+    font-family: "Bitcount Prop Single", system-ui;
+}
+.footer-menu a:hover {
+    color: skyblue;
+    text-shadow: 0px 0px 3px white;
+    transition: all ease-in-out 0.5s;
+}
+.text12{
+    color: rgb(255, 255, 255);
+}
+.text12:hover {
+    color: #DD452C;
+    transition: all ease-in-out 0.5s;
+    
+}
+.text13{
+    color: rgb(255, 255, 255);
+}
+.text13:hover {
+    color: #2B2D2E;
+    transition: all ease-in-out 0.5s;
+    
+}
+.text14{
+    color: rgb(255, 255, 255);
+}
+.text14:hover {
+    color: #A8A9AC;
+    transition: all ease-in-out 0.5s;
+    
+}
+.text15{
+    color: rgb(255, 255, 255);
+}
+.text15:hover {
+    color: #889B92;
+    transition: all ease-in-out 0.5s;
+    
+}
+.text16{
+    color: rgb(255, 255, 255);
+}
+.text16:hover {
+    color: #5B5B5D;
+    transition: all ease-in-out 0.5s;
+    
+}
+.text17{
+    color: rgb(255, 255, 255);
+}
+.text17:hover {
+    color: #CB301F;
+    transition: all ease-in-out 0.5s;
+    
+}
+.text18{
+    color: rgb(255, 255, 255);
+}
+.text18:hover {
+    color: #96ADA7;
+    transition: all ease-in-out 0.5s;
+    
+}
+.text27{
+    color: rgb(255, 255, 255);
+}
+.text27:hover {
+    color: #B0ACA8;
+    transition: all ease-in-out 0.5s;
+    
+}
+.text28{
+    color: rgb(255, 255, 255);
+}
+.text28:hover {
+    color: #333F5E;
+    transition: all ease-in-out 0.5s;
+    
+}
+.text29{
+    color: rgb(255, 255, 255);
+}
+.text29:hover {
+    color: #fb5437;
+    transition: all ease-in-out 0.5s;
+    
+}
+.text30{
+    color: rgb(255, 255, 255);
+}
+.text30:hover {
+    color: #B6BABE;
+    transition: all ease-in-out 0.5s;
+    
+}
+.text31{
+    color: rgb(255, 255, 255);
+}
+.text31:hover {
+    color: #000000;
+    transition: all ease-in-out 0.5s;
+    
+}
+.text32{
+    color: rgb(255, 255, 255);
+}
+.text32:hover {
+    color: #fb6349;
+    transition: all ease-in-out 0.5s;
+    
+}
+.text33{
+    color: rgb(255, 255, 255);
+}
+.text33:hover {
+    color: #000000;
+    transition: all ease-in-out 0.5s;
+    
+}
+.text34{
+    color: rgb(255, 255, 255);
+}
+.text34:hover {
+    color: #a3a3a3;
+    transition: all ease-in-out 0.5s;
+    
+}
+.text35{
+    color: rgb(255, 255, 255);
+}
+.text35:hover {
+    color: #4C5C9A;
+    transition: all ease-in-out 0.5s;
+    
+}
+.text36{
+    color: rgb(255, 255, 255);
+}
+.text36:hover {
+    color: #AABBB2;
+    transition: all ease-in-out 0.5s;
+    
+}
+.text37{
+    color: rgb(255, 255, 255);
+}
+.text37:hover {
+    color: black;
+    transition: all ease-in-out 0.5s;
+    
+}
+.text38{
+    color: rgb(255, 255, 255);
+}
+.text38:hover {
+    color: #fb6349;
+    transition: all ease-in-out 0.5s;
+    
+}
+.text39{
+    color: rgb(255, 255, 255);
+}
+.text39:hover {
+    color: #DE6546;
+    transition: all ease-in-out 0.5s;
+    
+}
+.text40{
+    color: rgb(255, 255, 255);
+}
+.text40:hover {
+    color: #BB3F36;
+    transition: all ease-in-out 0.5s;
+    
+}
+.text41{
+    color: rgb(255, 255, 255);
+}
+.text41:hover {
+    color: #91999F;
+    transition: all ease-in-out 0.5s;
+    
+}
+.text42{
+    color: rgb(255, 255, 255);
+}
+.text42:hover {
+    color: #435485;
+    transition: all ease-in-out 0.5s;
+    
+}

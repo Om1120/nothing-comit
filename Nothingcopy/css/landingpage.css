@@ -1,0 +1,185 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Header container */
+.header-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+    background-color: black;
+}
+a{
+    color: black;
+    text-decoration: none;
+}
+a:hover{
+     color: skyblue;
+    transition: all ease-in-out 0.5s;
+}
+
+.logo a{
+    color: #801f29;
+    font-family: "Bitcount Prop Single", system-ui;
+    font-size: 32px;
+}
+.logo a:hover{
+    color: rgb(255, 0, 0);
+    transition: all ease-in-out 0.5s;
+}
+
+/* Navigation */
+.nav {
+    display: flex;
+    gap: 24px;
+}
+
+/* Links */
+.nav-link {
+    font-family: "Bitcount Prop Single", system-ui;
+    font-size: 28px;
+    text-decoration: none;
+    color: rgb(52, 80, 91);
+}
+.nav-link:hover {
+    color: skyblue;
+    transition: all ease-in-out 0.5s;
+}
+
+.landimg img {
+    height: 100%;
+    width: 1521px;
+    margin-bottom: 10px;
+}
+
+.mainhead {
+    text-align: center;
+    line-height: 100vh;
+     font-family: "Bitcount Prop Single", system-ui;
+     font-weight: 400;
+}
+
+.pah1 {
+    color: rgb(255, 255, 255);
+}
+.pah1:hover {
+    color: #266881;
+    transition: all ease-in-out 0.9s;
+    text-shadow: #414141 0px 0px 6px;
+}
+.pah2 {
+    color: grey;
+}
+.pah2:hover {
+    color: #AF2330;
+    transition: all ease-in-out 0.9s;
+    text-shadow: #5e1119 0px 0px 6px;
+}
+
+.pah3 {
+    color: #B6CCDA;
+}
+.pah3:hover {
+    color: #BD4143;
+    transition: all ease-in-out 0.9s;
+    text-shadow: rgb(40, 7, 10) 0px 0px 6px;
+}
+
+.pah4 {
+    color: rgb(183, 182, 182);
+}
+.pah4:hover {
+    color: #062F37;
+    transition: all ease-in-out 0.9s;
+    text-shadow: #1a9fb9 0px 0px 6px;
+}
+
+.pah5 {
+    color: rgb(0, 0, 0);
+}
+.pah5:hover {
+    color: #F17786;
+    transition: all ease-in-out 0.9s;
+    text-shadow: #91474f 0px 0px 6px;
+}
+
+.pah6 {
+    color: #ffd4a3;
+}
+.pah6:hover {
+    color: #C43F2C;
+    transition: all ease-in-out 0.9s;
+    text-shadow: #ea7664 0px 0px 6px;
+}
+
+.pah7 {
+    color: #ff3300;
+}
+.pah7:hover {
+    color: #9AA6B2;
+    transition: all ease-in-out 0.9s;
+    text-shadow: #3777b6 0px 0px 6px;
+}
+
+.mainback {
+    width: 100vw;
+    height: 100vh;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.page1 {
+    background-image: url(../img/landingpage1.avif);
+}
+
+.page2 {
+    background-image: url(../img/landingpage2.avif);
+}
+
+.page3 {
+    background-image: url(../img/landingpage3.avif);
+}
+
+.page4 {
+    background-image: url(../img/landingpage4);
+}
+
+.page5 {
+    background-image: url(../img/landingpage5.avif);
+}
+
+.page6 {
+    background-image: url(../img/landingpage6.avif);
+}
+
+.page7 {
+    background-image: url(../img/landingpage7.avif);
+}
+.footer {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background-color: rgb(0, 0, 0);
+}
+
+.footer-menu a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    font-size: 26px;
+    letter-spacing: 3px;
+    margin: 20px;
+    text-align: center;
+    font-family: "Bitcount Prop Single", system-ui;
+}
+.footer-menu a:hover {
+    color: skyblue;
+    text-shadow: 0px 0px 3px white;
+    transition: all ease-in-out 0.5s;
+}

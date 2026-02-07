@@ -1,0 +1,30 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.main{
+    width: 100vw;
+    height: 100vh;
+    /* background-color: aqua; */
+    /* background: linear-gradient(360deg,rgba(42, 123, 155, 1) 0%, rgba(173, 212, 105, 1) 50%, rgba(237, 221, 83, 1) 100%); */
+    background-image: url(../img/sum.webp);    
+    background-blend-mode:darken;
+    background-repeat: no-repeat;
+    /* background-position:150px 150px ; */
+    background-size: contain;
+    /* background-attachment: scroll; */
+}
+/* h1{
+    color:#ffffff;
+    text-align: center;
+    line-height: 100vh;
+} */
+ 
+
+
+/* .moon{
+background-image: url(../img/moon.webp);
+}
+.win{
+background-image: url(../img/win.webp);
+} */
