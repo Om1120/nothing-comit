@@ -9,9 +9,22 @@
     <link rel="stylesheet" href="slid.css">
 </head>
 <body>
-    
+    <div class="owl-carousel owl-theme">
+    <div class="item"><img src="/Nothingcopy/img/landingpage1.avif" alt="Landing Page 1"></div>
+    <div class="item"><img src="/Nothingcopy/img/landingpage2.avif"></div>
+    <div class="item"><img src="/Nothingcopy/img/landingpage3.avif"></div>
+    <div class="item"><img src="/Nothingcopy/img/landingpage4"></div>
+    <div class="item"><img src="/Nothingcopy/img/landingpage5.avif"></div>
+    <div class="item"><img src="/Nothingcopy/img/landingpage6.avif"></div>
+</div>
 </body>
-<script src="./js/jquery.js"></script>
-<script src="./js/owl.carousel.min.js"></script>
-
+<script src="/Nothingcopy/js/jquery.js"></script>
+<script src="/Nothingcopy/js/owl.carousel.min.js"></script>
+<script>
+$('.owl-carousel').owlCarousel({
+    items:1,
+    margin:10,
+    autoHeight:true
+});
+</script>
 </html>
