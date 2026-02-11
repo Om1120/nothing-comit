@@ -1,9 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Purity & Clean</title>
+
+      <!-- link original -->
+    <!-- https://veented.com/templates/purity/ -->
 
     <!-- Google Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -18,19 +22,12 @@
             font-family: "League Gothic", sans-serif;
         }
 
-        /* Navbar spacing */
-        .navbar {
-            padding: 25px 0;
-            align-items: center;
-        }
-
-        /* Logo */
+        /* Navbar */
         .navbar-brand img {
             width: 150px;
-            height: auto;
+            height: 50px;
         }
 
-        /* Menu links */
         .navbar-nav .nav-link {
             font-size: 18px;
             letter-spacing: 1.5px;
@@ -43,123 +40,160 @@
             color: #D16F4E;
         }
 
-        /* Dropdown menu */
         .dropdown-menu {
             border-radius: 0;
             font-size: 16px;
+            margin-top: 15px;
+        }
+
+        .anker {
+            text-decoration: none;
+            color: #D16F4E;
+        }
+
+        .anker:hover {
+            color: #444;
+        }
+
+        .text {
+            font-size: 34px;
         }
     </style>
 </head>
 
 <body>
 
-<!-- NAVBAR -->
-<nav class="navbar navbar-expand-lg bg-white">
-    <div class="container align-items-center">
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white">
+        <div class="container">
 
-        <!-- LOGO -->
-        <a class="navbar-brand" href="#">
-            <img src="../imghai/logo (1).png" alt="Purity Logo">
-        </a>
+            <a class="navbar-brand" href="#">
+                <img src="../imghai/logo (1).png" alt="Purity Logo">
+            </a>
 
-        <!-- MOBILE BUTTON -->
-        <button class="navbar-toggler" type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#mainNavbar">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-        <!-- MENU -->
-        <div class="collapse navbar-collapse justify-content-center" id="mainNavbar">
-            <ul class="navbar-nav align-items-center">
+            <div class="collapse navbar-collapse justify-content-center" id="mainNavbar">
+                <ul class="navbar-nav align-items-center">
 
-                <!-- HOME -->
-                <li class="nav-item dropdown">
-                    <a class="nav-link active" href="#" data-bs-toggle="dropdown">
-                        HOME
-                    </a>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">Home 1</a></li>
-                        <li><a class="dropdown-item" href="#">Home 2</a></li>
-                    </ul>
-                </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link active" href="#" data-bs-toggle="dropdown" role="button">
+                            HOME
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Home 1</a></li>
+                            <li><a class="dropdown-item" href="#">Home 2</a></li>
+                        </ul>
+                    </li>
 
-                <!-- ABOUT -->
-                <li class="nav-item">
-                    <a class="nav-link" href="#">ABOUT</a>
-                </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">ABOUT</a>
+                    </li>
 
-                <!-- BLOG -->
-                <li class="nav-item dropdown">
-                    <a class="nav-link" href="#" data-bs-toggle="dropdown">
-                        BLOG
-                    </a>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">Blog Grid</a></li>
-                        <li><a class="dropdown-item" href="#">Blog Single</a></li>
-                    </ul>
-                </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link" href="#" data-bs-toggle="dropdown" role="button">
+                            BLOG
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Blog Grid</a></li>
+                            <li><a class="dropdown-item" href="#">Blog Single</a></li>
+                        </ul>
+                    </li>
 
-                <!-- SIMPLE CODES -->
-                <li class="nav-item dropdown">
-                    <a class="nav-link" href="#" data-bs-toggle="dropdown">
-                        SIMPLE CODES
-                    </a>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">HTML</a></li>
-                        <li><a class="dropdown-item" href="#">CSS</a></li>
-                        <li><a class="dropdown-item" href="#">JavaScript</a></li>
-                    </ul>
-                </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link" href="#" data-bs-toggle="dropdown" role="button">
+                            SIMPLE CODES
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">HTML</a></li>
+                            <li><a class="dropdown-item" href="#">CSS</a></li>
+                            <li><a class="dropdown-item" href="#">JavaScript</a></li>
+                        </ul>
+                    </li>
 
-                <!-- PORTFOLIO -->
-                <li class="nav-item dropdown">
-                    <a class="nav-link" href="#" data-bs-toggle="dropdown">
-                        PORTFOLIO
-                    </a>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">Portfolio Grid</a></li>
-                        <li><a class="dropdown-item" href="#">Portfolio Single</a></li>
-                    </ul>
-                </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link" href="#" data-bs-toggle="dropdown" role="button">
+                            PORTFOLIO
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Portfolio Grid</a></li>
+                            <li><a class="dropdown-item" href="#">Portfolio Single</a></li>
+                        </ul>
+                    </li>
 
-                <!-- CONTACT -->
-                <li class="nav-item">
-                    <a class="nav-link" href="#">CONTACT</a>
-                </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">CONTACT</a>
+                    </li>
 
-            </ul>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- CAROUSEL -->
+    <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+
+            <div class="carousel-item active">
+                <img src="../imghai/1.jpg" class="d-block w-100" alt="Slide 1">
+            </div>
+
+            <div class="carousel-item">
+                <img src="../imghai/2.jpg" class="d-block w-100" alt="Slide 2">
+            </div>
+
+            <div class="carousel-item">
+                <img src="../imghai/3.jpg" class="d-block w-100" alt="Slide 3">
+            </div>
+
+            <div class="carousel-item">
+                <img src="../imghai/4.jpg" class="d-block w-100" alt="Slide 4">
+            </div>
+
         </div>
 
-    </div>
-</nav>
-<div id="carouselExample" class="carousel slide">
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img src="../imghai/1.jpg" class="d-block w-100" alt="...">
-    </div>
-    <div class="carousel-item">
-      <img src="../imghai/2.jpg" class="d-block w-100" alt="...">
-    </div>
-    <div class="carousel-item">
-      <img src="../imghai/3.jpg" class="d-block w-100" alt="...">
-    </div>
-     <div class="carousel-item">
-      <img src="../imghai/4.jpg" class="d-block w-100" alt="...">
-    </div>
-  </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
-  </button>
-</div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </button>
 
-<!-- Bootstrap JS -->
-<script src="../js/bootstrap.bundle.min.js"></script>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </button>
+
+    </div>
+
+    <!-- INTRO SECTION -->
+    <section class="intro-section text">
+        <div class="container">
+            <div class="intro-text text-center mt-5 mb-5">
+                HELLO AND WELCOME TO PURITY, A NYC BASED PHOTOGRAPHY AGENCY.
+                <br>
+                FEEL FREE TO READ MORE <a href="#" class="anker">ABOUT US</a>
+                AND CHECK OUR <a href="#" class="anker">PORTFOLIO</a>.
+                QUESTIONS? <a href="#" class="anker">SEND US A MAIL</a>.
+            </div>
+        </div>
+    </section>
+
+    <div class="container my-5">
+        <p class="text-uppercase text">Recent Work</p>
+
+        <a class="icon-link icon-link-hover anker" href="#">
+            View Portfolio
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi ms-2"
+                viewBox="0 0 16 16">
+                <path
+                    d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
+            </svg>
+        </a>
+
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="../js/bootstrap.bundle.min.js"></script>
 
 </body>
+
 </html>
