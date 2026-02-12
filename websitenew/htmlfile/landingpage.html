@@ -6,26 +6,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Purity & Clean</title>
 
-      <!-- link original -->
+    <!-- original link -->
     <!-- https://veented.com/templates/purity/ -->
 
-    <!-- Google Font -->
+    <!-- Google font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=League+Gothic&display=swap" rel="stylesheet">
+    <!-- google font 2 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap" rel="stylesheet">
 
-    <!-- Bootstrap CSS -->
+    <!-- bootstrap -->
     <link rel="stylesheet" href="../css/bootstrap.min.css">
+
+    <!-- font awsome -->
+    <link rel="stylesheet" href="../css/all.min.css">
 
     <style>
         body {
             font-family: "League Gothic", sans-serif;
         }
 
-        /* Navbar */
+        /* navbar */
+
         .navbar-brand img {
             width: 150px;
             height: 50px;
+            object-fit: contain;
         }
 
         .navbar-nav .nav-link {
@@ -55,8 +64,104 @@
             color: #444;
         }
 
-        .text {
+        .text-section {
             font-size: 34px;
+        }
+
+        .font {
+            font-size: 26px;
+        }
+
+        .recent-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: 0.5s ease-in-out;
+        }
+
+        .recent-img:hover {
+            opacity: 0.2;
+        }
+
+        .dotted-border {
+            border-top: 3px dotted #ccc;
+        }
+
+        .marg {
+            margin-left: 110px;
+        }
+
+        .iconsize {
+            font-size: 26px;
+        }
+
+        .section-title {
+            font-size: 42px;
+            letter-spacing: 2px;
+            margin-bottom: 50px;
+        }
+
+        .feature-box {
+            display: flex;
+            align-items: flex-start;
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+
+        .feature-icon {
+            font-size: 32px;
+            color: #999;
+            min-width: 40px;
+        }
+
+        .feature-title {
+            font-size: 20px;
+            letter-spacing: 1px;
+        }
+
+        .feature-text {
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+            color: #666;
+            margin-top: 5px;
+            line-height: 1.6;
+        }
+
+        .footer {
+            padding: 50px 0;
+        }
+
+        .footer h6 {
+            font-size: 28px;
+            letter-spacing: 1px;
+            margin-bottom: 20px;
+        }
+
+        .footer p {
+            color: #777;
+            font-size: 18px;
+        }
+
+        .footer .brand {
+            font-size: 48px;
+            font-weight: 400;
+            color: #555;
+        }
+
+        .footer a {
+            color: #ff6b4a;
+            font-size: 18px;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            color: #444444;
+        }
+
+        .comfortaa {
+            font-family: "Comfortaa", sans-serif;
+            font-optical-sizing: auto;
+            font-style: normal;
         }
     </style>
 </head>
@@ -133,66 +238,248 @@
     </nav>
 
     <!-- CAROUSEL -->
-    <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-inner">
+    <div class="dotted-border">
+        <div id="carouselExample" class="carousel slide mt-4" data-bs-ride="carousel">
 
-            <div class="carousel-item active">
-                <img src="../imghai/1.jpg" class="d-block w-100" alt="Slide 1">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="0" class="active"></button>
+                <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="1"></button>
+                <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="2"></button>
+                <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="3"></button>
             </div>
 
-            <div class="carousel-item">
-                <img src="../imghai/2.jpg" class="d-block w-100" alt="Slide 2">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="../imghai/1.jpg" class="d-block w-100" alt="Slide 1">
+                </div>
+                <div class="carousel-item">
+                    <img src="../imghai/2.jpg" class="d-block w-100" alt="Slide 2">
+                </div>
+                <div class="carousel-item">
+                    <img src="../imghai/3.jpg" class="d-block w-100" alt="Slide 3">
+                </div>
+                <div class="carousel-item">
+                    <img src="../imghai/4.jpg" class="d-block w-100" alt="Slide 4">
+                </div>
             </div>
 
-            <div class="carousel-item">
-                <img src="../imghai/3.jpg" class="d-block w-100" alt="Slide 3">
-            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </button>
 
-            <div class="carousel-item">
-                <img src="../imghai/4.jpg" class="d-block w-100" alt="Slide 4">
-            </div>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </button>
 
         </div>
-
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon"></span>
-        </button>
-
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-            <span class="carousel-control-next-icon"></span>
-        </button>
-
     </div>
 
-    <!-- INTRO SECTION -->
-    <section class="intro-section text">
+
+    <!-- INTRO -->
+    <section class="text-section text-center my-5">
         <div class="container">
-            <div class="intro-text text-center mt-5 mb-5">
-                HELLO AND WELCOME TO PURITY, A NYC BASED PHOTOGRAPHY AGENCY.
-                <br>
-                FEEL FREE TO READ MORE <a href="#" class="anker">ABOUT US</a>
-                AND CHECK OUR <a href="#" class="anker">PORTFOLIO</a>.
-                QUESTIONS? <a href="#" class="anker">SEND US A MAIL</a>.
-            </div>
+            HELLO AND WELCOME TO PURITY, A NYC BASED PHOTOGRAPHY AGENCY.
+            <br>
+            FEEL FREE TO READ MORE <a href="#" class="anker">ABOUT US</a>
+            AND CHECK OUR <a href="#" class="anker">PORTFOLIO</a>.
+            QUESTIONS? <a href="#" class="anker">SEND US A MAIL</a>.
         </div>
     </section>
-
-    <div class="container my-5">
-        <p class="text-uppercase text">Recent Work</p>
-
-        <a class="icon-link icon-link-hover anker" href="#">
-            View Portfolio
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi ms-2"
-                viewBox="0 0 16 16">
-                <path
-                    d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
-            </svg>
-        </a>
-
     </div>
 
-    <!-- Bootstrap JS -->
-    <script src="../js/bootstrap.bundle.min.js"></script>
+    <!-- RECENT WORK -->
+    <div class="dotted-border">
+        <div class="container my-5">
+            <p class="text-uppercase font mb-4">Recent Work</p>
+
+            <div class="row g-4">
+                <div class="col-md-3">
+                    <img src="../imghai/box1.php" class="img-fluid rounded recent-img" alt="box1">
+                </div>
+
+                <div class="col-md-3">
+                    <img src="../imghai/box2.php" class="img-fluid rounded recent-img" alt="box2">
+                </div>
+
+                <div class="col-md-3">
+                    <img src="../imghai/box3.php" class="img-fluid rounded recent-img" alt="box3">
+                </div>
+
+                <div class="col-md-3">
+                    <img src="../imghai/box4.php" class="img-fluid rounded recent-img" alt="box4">
+                </div>
+            </div>
+            <a class="icon-link icon-link-hover anker" href="#">
+                View Portfolio
+                <svg xmlns="http://www.w3.org/2000/svg" class="bi" viewBox="0 0 16 16" aria-hidden="true">
+                    <path
+                        d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
+                </svg>
+            </a>
+        </div>
+    </div>
+
+    <div class="dotted-border ">
+        <section class="py-5">
+            <div class="container">
+                <h2 class="section-title">WHY CHOOSE PURITY?</h2>
+
+                <div class="row">
+
+                    <!-- Item 1 -->
+                    <div class="col-md-6 col-lg-3">
+                        <div class="feature-box">
+                            <i class="fa-solid fa-eye feature-icon"></i>
+                            <div>
+                                <div class="feature-title">ELEGANT DESIGN</div>
+                                <div class="feature-text">
+                                    Minimalism has been a popular website design style for years.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item 2 -->
+                    <div class="col-md-6 col-lg-3">
+                        <div class="feature-box">
+                            <i class="fa-solid fa-tags feature-icon"></i>
+                            <div>
+                                <div class="feature-title">SIMPLE CODES</div>
+                                <div class="feature-text">
+                                    Numerous simple HTML codes will help you build a website that you want.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item 3 -->
+                    <div class="col-md-6 col-lg-3">
+                        <div class="feature-box">
+                            <i class="fa-solid fa-earth-asia feature-icon"></i>
+                            <div>
+                                <div class="feature-title">COMPATIBILITY</div>
+                                <div class="feature-text">
+                                    Purity is fully compatible with all modern browsers.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item 4 -->
+                    <div class="col-md-6 col-lg-3">
+                        <div class="feature-box">
+                            <i class="fa-solid fa-envelope feature-icon"></i>
+                            <div>
+                                <div class="feature-title">AJAX CONTACT FORM</div>
+                                <div class="feature-text">
+                                    Template comes with a built-in, easy to customize Ajax Contact Form.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item 5 -->
+                    <div class="col-md-6 col-lg-3">
+                        <div class="feature-box">
+                            <i class="fa-solid fa-shuffle feature-icon"></i>
+                            <div>
+                                <div class="feature-title">FILTERABLE PORTFOLIO</div>
+                                <div class="feature-text">
+                                    Purity comes with a modern sortable/filterable portfolio effect.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item 6 -->
+                    <div class="col-md-6 col-lg-3">
+                        <div class="feature-box">
+                            <i class="fa-regular fa-image feature-icon"></i>
+                            <div>
+                                <div class="feature-title">NIVO SLIDER</div>
+                                <div class="feature-text">
+                                    Show off your work on the homepage with this beautiful slider.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item 7 -->
+                    <div class="col-md-6 col-lg-3">
+                        <div class="feature-box">
+                            <i class="fa-solid fa-file-lines feature-icon"></i>
+                            <div>
+                                <div class="feature-title">25 PAGE TEMPLATES</div>
+                                <div class="feature-text">
+                                    The variety is wide, pick templates that fits you best.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item 8 -->
+                    <div class="col-md-6 col-lg-3">
+                        <div class="feature-box">
+                            <i class="fa-solid fa-book feature-icon"></i>
+                            <div>
+                                <div class="feature-title">DOCUMENTATION</div>
+                                <div class="feature-text">
+                                    With an extensive documentation you won’t have any problems setting your page up.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <div class="dotted-border">
+
+            <section class="footer">
+                <div class="container">
+                    <div class="row text-center text-md-start">
+
+                        <!-- Logo -->
+                        <div class="col-md-3 mb-4">
+                            <div class="brand">PURITY</div>
+                        </div>
+
+                        <!-- Recent Tweets -->
+                        <div class="col-md-3 mb-4">
+                            <h6>RECENT TWEETS</h6>
+                            <p class="comfortaa">Please wait while tweets load..</p>
+                        </div>
+
+                        <!-- Flickr -->
+                        <div class="col-md-3 mb-4">
+                            <h6>FLICKR</h6>
+                        </div>
+
+                        <!-- Contact Info -->
+                        <div class="col-md-3 mb-4">
+                            <h6>CONTACT INFO</h6>
+                            <p class="comfortaa">
+                                Union Street 2b/345 <br>
+                                London, WE, 39-1403
+                            </p>
+
+                            <p class="comfortaa">
+                                Phone: 519 439 122
+                            </p>
+
+                            <p class="comfortaa">
+                                E-Mail: <a href="#">contact@pure.com</a>
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+        </div>
+
+        <script src="../js/bootstrap.bundle.min.js"></script>
 
 </body>
 
