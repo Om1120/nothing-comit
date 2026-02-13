@@ -17,18 +17,23 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap" rel="stylesheet">
-
+    
     <!-- bootstrap -->
     <link rel="stylesheet" href="../css/bootstrap.min.css">
-
+    
     <!-- font awsome -->
     <link rel="stylesheet" href="../css/all.min.css">
-
+    
     <style>
         body {
             font-family: "League Gothic", sans-serif;
         }
 
+        .comfortaa {
+            font-family: "Comfortaa", sans-serif;
+            font-optical-sizing: auto;
+            font-style: normal;
+        }
         /* navbar */
 
         .navbar-brand img {
@@ -38,7 +43,7 @@
         }
 
         .navbar-nav .nav-link {
-            font-size: 18px;
+            font-size: 22px;
             letter-spacing: 1.5px;
             margin-left: 30px;
             color: #666;
@@ -51,10 +56,15 @@
 
         .dropdown-menu {
             border-radius: 0;
-            font-size: 16px;
             margin-top: 15px;
         }
-
+        .droptext{
+            font-size: 22px;
+            color: #636363;
+        }
+        .droptext:hover{
+            color: #D16F4E;
+        }
         .anker {
             text-decoration: none;
             color: #D16F4E;
@@ -158,11 +168,6 @@
             color: #444444;
         }
 
-        .comfortaa {
-            font-family: "Comfortaa", sans-serif;
-            font-optical-sizing: auto;
-            font-style: normal;
-        }
 
         .last-section {
             padding: 25px 10px;
@@ -206,7 +211,7 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
 
-            <div class="collapse navbar-collapse justify-content-center" id="mainNavbar">
+            <div class="collapse navbar-collapse justify-content-end" id="mainNavbar">
                 <ul class="navbar-nav align-items-center">
 
                     <li class="nav-item dropdown">
@@ -214,8 +219,11 @@
                             HOME
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Home 1</a></li>
-                            <li><a class="dropdown-item" href="#">Home 2</a></li>
+                            <li><a class="dropdown-item droptext" href="#">DEFAULT LAYOUT</a></li>
+                            <div class="border"></div>
+                            <li><a class="dropdown-item droptext" href="#">ALTERNATE LAYOUT</a></li>
+                            <div class="border"></div>
+                            <li><a class="dropdown-item droptext" href="#">STATIC IMAGE LAYOUT</a></li>
                         </ul>
                     </li>
 
@@ -228,8 +236,19 @@
                             BLOG
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Blog Grid</a></li>
-                            <li><a class="dropdown-item" href="#">Blog Single</a></li>
+                            <li><a class="dropdown-item droptext" href="#">RIGHT SIDEBAR-1</a></li>
+                            <div class="border"></div>
+                            <li><a class="dropdown-item droptext" href="#">RIGHT SIDEBAR-2</a></li>
+                            <div class="border"></div>
+                            <li><a class="dropdown-item droptext" href="#">RIGHT SIDEBAR-3</a></li>
+                            <div class="border"></div>
+                            <li><a class="dropdown-item droptext" href="#">LEFT SIDEBAR-1</a></li>
+                            <div class="border"></div>
+                            <li><a class="dropdown-item droptext" href="#">LEFT SIDEBAR-2</a></li>
+                            <div class="border"></div>
+                            <li><a class="dropdown-item droptext" href="#">LEFT SIDEBAR-3</a></li>
+                            <div class="border"></div>
+                            <li><a class="dropdown-item droptext" href="#">BLOG POST</a></li>
                         </ul>
                     </li>
 
@@ -238,9 +257,11 @@
                             SIMPLE CODES
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">HTML</a></li>
-                            <li><a class="dropdown-item" href="#">CSS</a></li>
-                            <li><a class="dropdown-item" href="#">JavaScript</a></li>
+                            <li><a class="dropdown-item droptext" href="#">COLUMNS</a></li>
+                            <div class="border"></div>
+                            <li><a class="dropdown-item droptext" href="#">TYPOGRAPHY</a></li>
+                            <div class="border"></div>
+                            <li><a class="dropdown-item droptext" href="#">ELEMENTS</a></li>
                         </ul>
                     </li>
 
@@ -249,8 +270,18 @@
                             PORTFOLIO
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Portfolio Grid</a></li>
-                            <li><a class="dropdown-item" href="#">Portfolio Single</a></li>
+                            <li><a class="dropdown-item droptext" href="#">ONE COLUMNS-1</a></li>
+                            <li><a class="dropdown-item droptext" href="#">ONE COLUMNS0-2</a></li>
+                            <li><a class="dropdown-item droptext" href="#">TWO COLUMNS0-1</a></li>
+                            <li><a class="dropdown-item droptext" href="#">TWO COLUMNS0-2</a></li>
+                            <li><a class="dropdown-item droptext" href="#">TWO COLUMNS0-3</a></li>
+                            <li><a class="dropdown-item droptext" href="#">THREE COLUMNS0-1</a></li>
+                            <li><a class="dropdown-item droptext" href="#">THREE COLUMNS0-2</a></li>
+                            <li><a class="dropdown-item droptext" href="#">THREE COLUMNS0-3</a></li>
+                            <li><a class="dropdown-item droptext" href="#">FOUR COLUMNS0-1</a></li>
+                            <li><a class="dropdown-item droptext" href="#">FOUR COLUMNS0-2</a></li>
+                            <li><a class="dropdown-item droptext" href="#">FOUR COLUMNS0-3</a></li>
+                            <li><a class="dropdown-item droptext" href="#">PORTFOLIO ITEM PAGE</a></li>
                         </ul>
                     </li>
 
@@ -259,7 +290,7 @@
                     </li>
 
                 </ul>
-            </div>
+            </div>`1
         </div>
     </nav>
 
