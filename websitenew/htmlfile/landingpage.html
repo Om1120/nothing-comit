@@ -17,13 +17,13 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap" rel="stylesheet">
-    
+
     <!-- bootstrap -->
     <link rel="stylesheet" href="../css/bootstrap.min.css">
-    
+
     <!-- font awsome -->
     <link rel="stylesheet" href="../css/all.min.css">
-    
+
     <style>
         body {
             font-family: "League Gothic", sans-serif;
@@ -34,6 +34,7 @@
             font-optical-sizing: auto;
             font-style: normal;
         }
+
         /* navbar */
 
         .navbar-brand img {
@@ -58,15 +59,19 @@
             border-radius: 0;
             margin-top: 15px;
         }
-        .droptext{
+
+        .droptext {
             font-size: 22px;
             color: #636363;
         }
-        .droptext:hover{
+
+        .droptext:hover {
             color: #D16F4E;
         }
+
         .anker {
             text-decoration: none;
+            margin: 15px;
             color: #D16F4E;
         }
 
@@ -182,17 +187,54 @@
         .last-text span {
             color: #ff6b6b;
         }
+
         .anker2 {
             text-decoration: none;
             color: #cecdcd;
         }
 
         .anker2:hover {
-            color:#999999;
+            color: #999999;
             transition: ease-in-out 0.3s;
         }
-        .copy{
+
+        .copy {
             font-size: 10px;
+        }
+
+        .hover-card {
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+        }
+
+
+        .hover-card img {
+            transition: transform 0.5s ease;
+            display: block;
+        }
+
+        .card-img-overlay {
+            background-color: rgba(255, 255, 255, 0.85);
+            opacity: 0;
+            transition: opacity 0.4s ease-in-out;
+            color: #333 !important;
+
+        }
+
+        .hover-card:hover .card-img-overlay {
+            opacity: 1;
+
+        }
+
+        .hover-card:hover img {
+            transform: scale(1.1);
+
+        }
+
+
+        .plus-icon {
+            font-size: 2rem;
         }
     </style>
 </head>
@@ -219,11 +261,17 @@
                             HOME
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item droptext" href="http://127.0.0.1:5500/websitenew/htmlfile/landingpage.html">DEFAULT LAYOUT</a></li>
+                            <li><a class="dropdown-item droptext"
+                                    href="http://127.0.0.1:5500/websitenew/htmlfile/landingpage.html">DEFAULT LAYOUT</a>
+                            </li>
                             <div class="border"></div>
-                            <li><a class="dropdown-item droptext" href="http://127.0.0.1:5500/websitenew/htmlfile/landingpage.html">ALTERNATE LAYOUT</a></li>
+                            <li><a class="dropdown-item droptext"
+                                    href="http://127.0.0.1:5500/websitenew/htmlfile/landingpage.html">ALTERNATE
+                                    LAYOUT</a></li>
                             <div class="border"></div>
-                            <li><a class="dropdown-item droptext" href="http://127.0.0.1:5500/websitenew/htmlfile/landingpage.html">STATIC IMAGE LAYOUT</a></li>
+                            <li><a class="dropdown-item droptext"
+                                    href="http://127.0.0.1:5500/websitenew/htmlfile/landingpage.html">STATIC IMAGE
+                                    LAYOUT</a></li>
                         </ul>
                     </li>
 
@@ -294,7 +342,7 @@
         </div>
     </nav>
 
-    <!-- CAROUSEL -->
+    <!-- Slider -->
     <div class="border">
         <div id="carouselExample" class="carousel slide mt-4" data-bs-ride="carousel">
 
@@ -343,29 +391,82 @@
         </div>
     </section>
     </div>
+    
+            <!-- 4 IMAGE SECTION -->
+            <section class="border-top py-5">
+                <div class="container">
+                    <p class="text-uppercase font mb-4">Recent Work</p>
 
-    <!-- RECENT WORK -->
-    <div class="border">
-        <div class="container my-5">
-            <p class="text-uppercase font mb-4">Recent Work</p>
+                    <div class="row g-4">
 
-            <div class="row g-4">
-                <div class="col-md-3">
-                    <img src="../imghai/box1.php" class="img-fluid rounded recent-img" alt="box1">
+                        <!-- Image 1 -->
+                        <div class="col-12 col-sm-6 col-md-3">
+                            <div class="card hover-card border-0">
+                                <img src="../imghai/box1.php" class="card-img img-fluid" alt="">
+                                <div class="card-img-overlay d-flex flex-column">
+                                    <div>
+                                        <h5 class="fw-bold">GRAND CENTRAL</h5>
+                                        <p class="comfortaa">This is an example description.</p>
+                                    </div>
+                                    <div class="mt-auto ms-auto">
+                                        <span class="plus-icon"><i class="fa-solid fa-square-plus"></i></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Image 2 -->
+                        <div class="col-12 col-sm-6 col-md-3">
+                            <div class="card hover-card border-0">
+                                <img src="../imghai/box2.php" class="card-img img-fluid" alt="">
+                                <div class="card-img-overlay d-flex flex-column">
+                                    <div>
+                                        <h5 class="fw-bold">FLATIRON BUILDING</h5>
+                                        <p class="comfortaa">This is an example description.</p>
+                                    </div>
+                                    <div class="mt-auto ms-auto">
+                                        <span class="plus-icon"><i class="fa-solid fa-square-plus"></i></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Image 3 -->
+                        <div class="col-12 col-sm-6 col-md-3">
+                            <div class="card hover-card border-0">
+                                <img src="../imghai/box3.php" class="card-img img-fluid" alt="">
+                                <div class="card-img-overlay d-flex flex-column">
+                                    <div>
+                                        <h5 class="fw-bold">GOLDEN GATE</h5>
+                                        <p class="comfortaa">This is an example description.</p>
+                                    </div>
+                                    <div class="mt-auto ms-auto">
+                                        <span class="plus-icon"><i class="fa-solid fa-square-plus"></i></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Image 4 -->
+                        <div class="col-12 col-sm-6 col-md-3">
+                            <div class="card hover-card border-0">
+                                <img src="../imghai/box4.php" class="card-img img-fluid" alt="">
+                                <div class="card-img-overlay d-flex flex-column">
+                                    <div>
+                                        <h5 class="fw-bold">BOAT ON THE BEACH</h5>
+                                        <p class="comfortaa">This is an example description.</p>
+                                    </div>
+                                    <div class="mt-auto ms-auto">
+                                        <span class="plus-icon"><i class="fa-solid fa-square-plus"></i></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
                 </div>
+            </section>
 
-                <div class="col-md-3">
-                    <img src="../imghai/box2.php" class="img-fluid rounded recent-img" alt="box2">
-                </div>
-
-                <div class="col-md-3">
-                    <img src="../imghai/box3.php" class="img-fluid rounded recent-img" alt="box3">
-                </div>
-
-                <div class="col-md-3">
-                    <img src="../imghai/box4.php" class="img-fluid rounded recent-img" alt="box4">
-                </div>
-            </div>
             <a class="icon-link icon-link-hover anker" href="#">
                 View Portfolio
                 <svg xmlns="http://www.w3.org/2000/svg" class="bi" viewBox="0 0 16 16" aria-hidden="true">
@@ -540,7 +641,7 @@
 
                         <!-- Copyright Text -->
                         <p class="last-text mb-3">
-                             <i class="fa-regular fa-copyright copy"></i>2011 <span>Purity</span> - All rights reserved.
+                            <i class="fa-regular fa-copyright copy"></i>2011 <span>Purity</span> - All rights reserved.
                         </p>
 
                         <!-- Social Icons -->
