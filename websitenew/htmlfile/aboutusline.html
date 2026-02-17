@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About us</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=League+Gothic&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: "League Gothic", sans-serif;
+        }
+
+        .comfortaa {
+             font-family: 'Oswald', sans-serif;
+        }
+
+        /* Navbar */
+        .navbar-brand img {
+            width: 150px;
+            height: 50px;
+            object-fit: contain;
+        }
+
+        .navbar-nav .nav-link {
+            font-size: 22px;
+            letter-spacing: 1px;
+            margin-left: 20px;
+            color: #666;
+        }
+
+        .navbar-nav .nav-link:hover,
+        .navbar-nav .nav-link.active {
+            color: #D16F4E;
+        }
+
+        .dropdown-menu {
+            border-radius: 0;
+        }
+
+        .dropdown-item {
+            font-size: 22px;
+        }
+
+        .dropdown-item:hover {
+            color: #D16F4E;
+        }
+
+        .dotted-border {
+            border-top: 3px dotted #ccc;
+        }
+
+        .text-section {
+            padding: 60px 0;
+        }
+
+        .font {
+            font-size: 22px;
+        }
+
+        .contact-header {
+            background-color: white;
+        }
+
+        .contact-title {
+            font-size: 30px;
+            letter-spacing: 2px;
+            color: #333;
+        }
+
+        .contact-desc {
+            font-family: "Comfortaa", sans-serif;
+            font-size: 15px;
+            color: #888;
+        }
+
+        .divider {
+            width: 1px;
+            height: 40px;
+            background-color: #ccc;
+        }
+
+        .section-title {
+            font-weight: 600;
+            letter-spacing: 1px;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .main-img {
+            height: 350px;
+            object-fit: cover;
+        }
+
+        .dropcap::first-letter {
+            float: left;
+            font-size: 50px;
+            line-height: 1;
+            padding-right: 8px;
+            color: #333;
+        }
+
+        .quote-box {
+            border-left: 3px solid #ccc;
+            padding-left: 20px;
+            padding-top: 100px;
+            font-style: italic;
+            color: #777;
+        }
+
+        .sidebar-box {
+            background: #fff;
+            padding: 20px;
+            border: 1px solid #e0e0e0;
+        }
+
+        .sidebar-title {
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .blog-thumb {
+            width: 60px;
+            height: 60px;
+            object-fit: cover;
+        }
+
+        .nav-tabs .nav-link {
+            font-weight: 600;
+            color: #555;
+        }
+
+        .nav-tabs .nav-link.active {
+            background-color: #fff;
+            border-color: #dee2e6 #dee2e6 #fff;
+        }
+
+        /* Footer */
+        .footer {
+            padding: 50px 0;
+        }
+
+        .footer h6 {
+            font-size: 28px;
+            letter-spacing: 1px;
+            margin-bottom: 20px;
+        }
+
+        .footer p {
+            color: #777;
+            font-size: 18px;
+        }
+
+        .footer .brand {
+            font-size: 48px;
+            font-weight: 400;
+            color: #555;
+        }
+
+        .footer a {
+            color: #ff6b4a;
+            font-size: 18px;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            color: #444444;
+        }
+
+        .last-section {
+            padding: 25px 10px;
+            text-align: center;
+        }
+
+        .last-text {
+            font-size: 16px;
+            color: #555;
+        }
+
+        .last-text span {
+            color: #ff6b6b;
+        }
+
+        .anker2 {
+            text-decoration: none;
+            color: #cecdcd;
+        }
+
+        .anker2:hover {
+            color: #999999;
+            transition: ease-in-out 0.3s;
+        }
+           .section-title {
+            font-family: 'Oswald', sans-serif;
+            font-weight: 600;
+            letter-spacing: 1px;
+        }
+
+        .drop-cap::first-letter {
+            font-size: 3rem;
+            font-weight: bold;
+            float: left;
+            line-height: 1;
+            padding-right: 8px;
+            color: #333;
+        }
+
+        .testimonial-box {
+            border-left: 3px solid #ddd;
+            padding-left: 20px;
+            margin-bottom: 30px;
+            font-style: italic;
+            color: #777;
+        }
+
+        .testimonial-author {
+            font-style: normal;
+            font-size: 0.9rem;
+            color: #333;
+        }
+
+        .custom-text-title {
+            font-family: 'Oswald', sans-serif;
+            font-weight: 600;
+            letter-spacing: 1px;
+            font-size: 1rem;
+        }
+
+        .custom-text p {
+            color: #777;
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+    </style>
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white py-3">
+        <div class="container">
+
+            <a class="navbar-brand" href="#">
+                <img src="../imghai/logo (1).png" alt="Purity Logo">
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse justify-content-end" id="mainNavbar">
+                <ul class="navbar-nav align-items-lg-center">
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link active" href="#" data-bs-toggle="dropdown">HOME</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item"
+                                    href="http://127.0.0.1:5500/websitenew/htmlfile/landingpage.html">DEFAULT
+                                    LAYOUT</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item"
+                                    href="http://127.0.0.1:5500/websitenew/htmlfile/landingpage.html">ALTERNATE
+                                    LAYOUT</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item"
+                                    href="http://127.0.0.1:5500/websitenew/htmlfile/landingpage.html">STATIC IMAGE
+                                    LAYOUT</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">ABOUT</a>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link" href="#" data-bs-toggle="dropdown">BLOG</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">RIGHT SIDEBAR-1</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">RIGHT SIDEBAR-2</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">RIGHT SIDEBAR-3</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">LEFT SIDEBAR-1</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">LEFT SIDEBAR-2</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">LEFT SIDEBAR-3</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">BLOG POST</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link" href="#" data-bs-toggle="dropdown">SIMPLE CODES</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">COLUMNS</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">TYPOGRAPHY</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">ELEMENTS</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link" href="#" data-bs-toggle="dropdown">PORTFOLIO</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">ONE COLUMNS-1</a></li>
+                            <li><a class="dropdown-item" href="#">ONE COLUMNS0-2</a></li>
+                            <li><a class="dropdown-item" href="#">TWO COLUMNS0-1</a></li>
+                            <li><a class="dropdown-item" href="#">TWO COLUMNS0-2</a></li>
+                            <li><a class="dropdown-item" href="#">TWO COLUMNS0-3</a></li>
+                            <li><a class="dropdown-item" href="#">THREE COLUMNS0-1</a></li>
+                            <li><a class="dropdown-item" href="#">THREE COLUMNS0-2</a></li>
+                            <li><a class="dropdown-item" href="#">THREE COLUMNS0-3</a></li>
+                            <li><a class="dropdown-item" href="#">FOUR COLUMNS0-1</a></li>
+                            <li><a class="dropdown-item" href="#">FOUR COLUMNS0-2</a></li>
+                            <li><a class="dropdown-item" href="#">FOUR COLUMNS0-3</a></li>
+                            <li><a class="dropdown-item" href="#">PORTFOLIO ITEM PAGE</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link"
+                            href="http://127.0.0.1:5500/websitenew/htmlfile/contact.html">CONTACT</a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="border"></div>
+    <!-- CONTACT HEADER SECTION -->
+    <section class="contact-header py-5">
+        <div class="container">
+            <div class="row align-items-center text-center text-md-start">
+
+                <!-- CONTACT Title -->
+                <div class="col-12 col-md-auto">
+                    <h1 class="contact-title mb-3 mb-md-0">ABOUT US</h1>
+                </div>
+
+                <!-- Vertical Divider (Desktop Only) -->
+                <div class="col-auto d-none d-md-block">
+                    <div class="divider"></div>
+                </div>
+
+                <!-- Description -->
+                <div class="col-12 col-md">
+                    <p class="contact-desc mb-0">
+                        This is a custom subpage description.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <div class="border"></div>
+    <div class="container py-5">
+
+        <div class="row">
+
+            <!-- LEFT CONTENT -->
+            <div class="col-lg-8 comfortaa">
+
+                <!-- Top Image -->
+                <div class="mb-4">
+                    <img src="../imghai/about1.jpg" class="img-fluid w-100 main-img" alt="Bridge">
+                </div>
+
+                <!-- WHO ARE WE -->
+                <section class="mb-5">
+                    <h2 class="section-title">WHO ARE WE?</h2>
+
+                    <div class="row">
+                        <div class="col-md-7">
+                            <p class="dropcap">
+                                Passages of Lorem Ipsum available, but the majority have suffered alteration in some
+                                form, by injected humour, or randomised words which don't look even slightly believable.
+                                If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't
+                                anything embarrassing hidden in the middle of text. Proin fringilla lorem sit amet nunc
+                                dapibusposuere.Proin eget tortor id magna pellentesque consectetur. Morbi vulputate mi
+                                id dui convallis aliquam. Suspendisse dictum vehicula orci, ut vehicula sem ornare vel.
+                                Pellentesque sodales, purus laoreet mattis egestas, metus mauris lacinia velit, in
+                                venenatis metus justo vitae dolor.
+                            </p>
+                        </div>
+
+                        <div class="col-md-5 quote-box">
+                            <p>
+                                Maecenas sagittis, purus consequat tristique pretium, nunc dui tempor enim,
+                                eget facilisis justo magna non nunc.
+                            </p>
+                        </div>
+                    </div>
+                </section>
+
+                <hr>
+
+                <!-- WHAT DO WE DO -->
+                <section class="mt-5  body">
+                    <h2 class="section-title">WHAT DO WE DO?</h2>
+
+                    <!-- Tabs -->
+                    <ul class="nav nav-tabs mt-3" id="myTab" role="tablist">
+                        <li class="nav-item">
+                            <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#web">Website
+                                Design</button>
+                        </li>
+                        <li class="nav-item">
+                            <button class="nav-link" data-bs-toggle="tab" data-bs-target="#vector">Vector
+                                Graphics</button>
+                        </li>
+                        <li class="nav-item">
+                            <button class="nav-link" data-bs-toggle="tab" data-bs-target="#logo">Logo Design</button>
+                        </li>
+                        <li class="nav-item">
+                            <button class="nav-link" data-bs-toggle="tab" data-bs-target="#php">PHP Programming</button>
+                        </li>
+                    </ul>
+
+                    <div class="tab-content p-4 border border-top-0">
+                        <div class="tab-pane fade show active" id="web">
+                            Donec sed tellus eget sapien fringilla nonummy. Mauris a ante. Suspendisse quam sem,
+                            consequat at, commodo vitae, feugiat in, nunc. Morbi imperdiet augue quis tellus. Lorem
+                            ipsum dolor sit amet. Quisque aliquam. Donec faucibus.
+                        </div>
+
+                        <div class="tab-pane fade" id="vector">
+                            Lorem ipsum dolor sit amet.
+                        </div>
+
+                        <div class="tab-pane fade" id="logo">
+                            Integer auctor ornare augue, ac mattis eros cursus sed. Ut sed tortor lectus. Duis gravida
+                            posuere ultrices. Cras congue porttitor lorem eu vehicula. Curabitur id neque justo, id
+                            pretium tellus. Aliquam aliquam velit non risus sagittis ullamcorper. Fusce aliquam velit ut
+                            metus interdum id faucibus odio congue. Donec semper tortor rutrum diam pretium ut vehicula
+                            dolor egestas. Cras quis velit sapien, sed fringilla tellus. Morbi tincidunt pellentesque
+                            ipsum, sed porttitor urna hendrerit at.
+                        </div>
+
+                        <div class="tab-pane fade" id="php">
+                            Purus consequat tristique pretium, nunc dui tempor enim, eget facilisis justo magna non
+                            nunc. Maecenas sagittis, purus consequat.
+                        </div>
+                    </div>
+                </section>
+
+            </div>
+
+            <!-- SIDEBAR -->
+            <div class="col-lg-4 mt-5 mt-lg-0 comfortaa">
+
+                <!-- Search -->
+                <div class="sidebar-box mb-4">
+                    <input type="text" class="form-control" placeholder="Search...">
+                </div>
+
+                <!-- Blog -->
+                <div class="sidebar-box mb-4">
+                    <h5 class="sidebar-title">ON THE BLOG</h5>
+
+                    <div class="d-flex mb-3">
+                        <img src="https://via.placeholder.com/60" class="me-3 blog-thumb" alt="">
+                        <div>
+                            <strong>Post Title</strong><br>
+                            <small>by Admin on Feb 3, 2011</small>
+                        </div>
+                    </div>
+
+                    <div class="d-flex mb-3">
+                        <img src="https://via.placeholder.com/60" class="me-3 blog-thumb" alt="">
+                        <div>
+                            <strong>A bit longer title</strong><br>
+                            <small>by Admin on Feb 3, 2011</small>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Category -->
+                <div class="sidebar-box mb-4">
+                    <h5 class="sidebar-title">CATEGORY</h5>
+                    <ul class="list-unstyled">
+                        <li>Web Design</li>
+                        <li>Photography</li>
+                        <li>Personal Life</li>
+                        <li>New Look</li>
+                    </ul>
+                </div>
+
+                <!-- Archives -->
+                <div class="sidebar-box">
+                    <h5 class="sidebar-title">ARCHIVES</h5>
+                    <ul class="list-unstyled">
+                        <li>June 2011</li>
+                        <li>May 2011</li>
+                        <li>April 2011</li>
+                        <li>March 2011</li>
+                        <li>February 2011</li>
+                    </ul>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+    <section class="py-5 comfortaa">
+    <div class="container">
+        <div class="row">
+
+            <!-- Left Column -->
+            <div class="col-lg-8 mb-4">
+
+                <h2 class="section-title mb-4">WHAT PEOPLE THINK ABOUT US?</h2>
+
+                <p class="drop-cap text-muted">
+                   Clients of Lorem Ipsum available, but the majority have suffered alteration in some form Maecenas sagittis, purus consequat tristique pretium, nunc dui tempor enim, eget facilisis justo magna non unc dui tempor enim, eget facilisis justo magna non nunc:
+                </p>
+
+                <!-- Testimonial 1 -->
+                <div class="testimonial-box">
+                    <p>
+                        Maecenas sagittis, purus consequat tristique pretium, nunc dui tempor enim, eget facilisis justo magna non nunc. Maecenas sagittis, purus consequat tristique pretium, nunc dui tempor enim, eget facilisis justo magna non nunc. Proin eget tortor id magna pellentesque consectetur.
+                    </p>
+                    <div class="testimonial-author text-end">John Doe</div>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="testimonial-box">
+                    <p>
+                        Sagittis, purus consequat tristique pretium, nunc dui tempor enim, eget facilisis justo magna non nunc. Maecenas sagittis, purus consequat tristique pretium, nunc dui tempor enim.
+                    </p>
+                    <div class="testimonial-author text-end">Smith Anderson</div>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="testimonial-box">
+                    <p>
+                        Purus consequat tristique pretium, nunc dui tempor enim, eget facilisis justo magna non nunc. Maecenas sagittis, purus consequat tristique pretium, nunc dui tempor enim, eget facilisis justo magna non nunc.
+                    </p>
+                    <div class="testimonial-author text-end">Envato Marketplaces</div>
+                </div>
+
+            </div>
+
+            <!-- Right Column -->
+            <div class="col-lg-4">
+                <h5 class="custom-text-title mb-3">CUSTOM TEXT</h5>
+                <p class="text-muted">
+                    You can put any text content here or, if you prefer, another list containing your recent posts, works or useful links.
+                </p>
+            </div>
+
+        </div>
+    </div>
+</section>
+    <div class="border">
+
+        <section class="footer">
+            <div class="container">
+                <div class="row text-center text-md-start">
+
+                    <!-- Logo -->
+                    <div class="col-md-3 mb-4">
+                        <div class="brand">PURITY</div>
+                    </div>
+
+                    <!-- Recent Tweets -->
+                    <div class="col-md-3 mb-4">
+                        <h6>RECENT TWEETS</h6>
+                        <p class="comfortaa">Please wait while tweets load..</p>
+                    </div>
+
+                    <!-- Flickr -->
+                    <div class="col-md-3 mb-4">
+                        <h6>FLICKR</h6>
+                    </div>
+
+                    <!-- Contact Info -->
+                    <div class="col-md-3 mb-4">
+                        <h6>CONTACT INFO</h6>
+                        <p class="comfortaa">
+                            Union Street 2b/345 <br>
+                            London, WE, 39-1403
+                        </p>
+
+                        <p class="comfortaa">
+                            Phone: 519 439 122
+                        </p>
+
+                        <p class="comfortaa">
+                            E-Mail: <a href="#">contact@pure.com</a>
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <div class="border">
+
+            <footer class="last-section">
+                <div class="container">
+
+                    <!-- Copyright Text -->
+                    <p class="last-text mb-3">
+                        <i class="fa-regular fa-copyright copy"></i>2011 <span>Purity</span> - All rights reserved.
+                    </p>
+
+                    <!-- Social Icons -->
+                    <div class="social-icons">
+                        <a href="#" class="anker2"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#" class="anker2"><i class="fa-brands fa-square-facebook"></i></a>
+                        <a href="#" class="anker2"><i class="fa-brands fa-dribbble"></i></a>
+                        <a href="#" class="anker2"><i class="fa-solid fa-square-rss"></i></a>
+                    </div>
+
+                </div>
+            </footer>
+
+            <!-- Bootstrap JS -->
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
