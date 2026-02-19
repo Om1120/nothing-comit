@@ -10,7 +10,7 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 
   <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="../css/all.min.css">
 
   <style>
     html,
@@ -22,11 +22,9 @@
       min-height: 100vh;
     }
 
-    .profile-img {
+    /* .profile-img {
       object-fit: cover;
-      height: 100%;
-      width: 100%;
-    }
+    } */
 
     .overlay {
       background: rgba(220, 53, 69, 0.85);
@@ -51,9 +49,11 @@
     <div class="row g-0">
 
       <!-- LEFT SIDE -->
-      <div class="col-lg-6 position-relative text-white left-side">
-
-        <img src="../img/img-profile.jpg" class="profile-img" alt="Profile">
+      <div class="col-lg-6 position-relative text-white min-vh-100">
+        <div class="fixed-top">
+          <img src="../img/img-profile.jpg" class="profile-img w-100 h-100 position-absolute top-0 start-0" alt="Profile">
+        </div>
+        
 
         <div class="position-absolute top-0 start-0 w-100 h-100 overlay"></div>
 
