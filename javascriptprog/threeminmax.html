@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Min and Max of two number</title>
+</head>
+
+<body>
+    <script>
+        var a = parseInt(prompt("Enter first number:"));
+        var b = parseInt(prompt("Enter second number:"));
+        var c = parseInt(prompt("Enter third number:"));
+
+        var min, max;
+
+        if (a < b && a < c) {
+            min = a;
+        } else if (b < c) {
+            min = b;
+        } else {
+            min = c;
+        }
+
+        if (a > b && a > c) {
+            max = a;
+        } else if (b > c) {
+            max = b;
+        } else {
+            max = c;
+        }
+
+        document.write("Minimum value = " + min + "<br>");
+        document.write("Maximum value = " + max);
+    </script>
+</body>
+
+</html>

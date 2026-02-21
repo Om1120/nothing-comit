@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>swap</title>
+</head>
+
+<body>
+    <script>
+    var a=parseInt(prompt("enter value of a"));
+    var b=parseInt(prompt("enter value of b"));
+
+    document.write("Before Swapping:<br>");
+    document.write("a = " + a + "<br>");
+    document.write("b = " + b + "<br><br>");
+
+    var temp;
+
+    temp = a;
+    a = b;
+    b = temp;
+
+    document.write("After Swapping:<br>");
+    document.write("a = " + a + "<br>");
+    document.write("b = " + b);
+    </script>
+</body>
+
+</html>
