@@ -6,6 +6,37 @@
     <title>STUDENT RESULT</title>
 </head>
 <body>
-    
+    <script>
+        prompt("enter your name");
+        prompt("enter your roll number");
+        var sub1=parseInt(prompt("enter your subject 1 marks"));
+        var sub2=parseInt(prompt("enter your subject 2 marks"));
+        var sub3=parseInt(prompt("enter your subject 3 marks"));
+        var sub4=parseInt(prompt("enter your subject 4 marks"));
+        var sub5=parseInt(prompt("enter your subject 5 marks"));
+        var sub6=parseInt(prompt("enter your subject 6 marks"));
+        var total=sub1+sub2+sub3+sub4+sub5+sub6;
+        var per=(total/600)*100;
+        document.write("total marks is : ",total);
+        document.write("<br>percentage is : ",per);
+        if(per>=80){
+            document.write("<br>grade is : A+");
+        }
+        else if(per>=70 && per<80){
+            document.write("<br>grade is : A");
+        }
+        else if(per>=60 && per<70){
+            document.write("<br>grade is : B");
+        }
+        else if(per>=50 && per<60){
+            document.write("<br>grade is : C");
+        }
+        else if(per>=40 && per<50){
+            document.write("<br>grade is : D");
+        }
+        else{
+            document.write("<br>grade is : F");
+        }
+    </script>
 </body>
 </html>
