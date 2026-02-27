@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currency count project</title>
+</head>
+<body>
+    <script>
+        var amount = parseInt(prompt("Enter amount in rupees:"));
+        var count = 0;
+
+        if (amount >= 1000) {
+            count = Math.floor(amount / 1000);
+            document.write(count + " notes of 1000<br>");
+            amount = amount % 1000;
+        }
+
+        if (amount >= 500) {
+            count = Math.floor(amount / 500);
+            document.write(count + " notes of 500<br>");
+            amount = amount % 500;
+        }
+
+        if (amount >= 100) {
+            count = Math.floor(amount / 100);
+            document.write(count + " notes of 100<br>");
+            amount = amount % 100;
+        }
+
+        if (amount >= 50) {
+            count = Math.floor(amount / 50);
+            document.write(count + " notes of 50<br>");
+            amount = amount % 50;
+        }
+
+        if (amount >= 25) {
+            count = Math.floor(amount / 25);
+            document.write(count + " notes of 25<br>");
+            amount = amount % 25;
+        }
+
+        if (amount >= 1) {
+            document.write(amount + " coins of 1<br>");
+        }
+    </script>
+</body>
+</html>

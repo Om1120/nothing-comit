@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Salary Details Project</title>
+</head>
+<body>
+    <script>
+        var empName = prompt("Enter employee name:");
+        var empId = prompt("Enter employee ID:");
+        var basicSalary = parseFloat(prompt("Enter basic salary:"));
+
+        var hra = 0.2 * basicSalary; // House Rent Allowance
+        var da = 0.1 * basicSalary; // Dearness Allowance
+        var grossSalary = basicSalary + hra + da;
+
+        document.write("<h2>Employee Salary Details</h2>");
+        document.write("Employee Name: " + empName + "<br>");
+        document.write("Employee ID: " + empId + "<br>");
+        document.write("Basic Salary: " + basicSalary.toFixed(2) + "<br>");
+        document.write("HRA (20%): " + hra.toFixed(2) + "<br>");
+        document.write("DA (10%): " + da.toFixed(2) + "<br>");
+        document.write("Gross Salary: " + grossSalary.toFixed(2) + "<br>");
+    </script>
+</body>
+</html>
