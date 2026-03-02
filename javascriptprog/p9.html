@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>P9 Pattern</title>
+</head>
+
+<body>
+
+    <script>
+        var rows = prompt("Enter number of rows:");
+
+        for (var i = 1; i <= rows; i++) {
+
+            for (var s = 1; s <= rows - i; s++) {
+                document.write("&nbsp;&nbsp;");
+            }
+
+            for (var j = 1; j <= i; j++) {
+                document.write(j);
+            }
+
+            document.write("<br/>");
+        }
+
+    </script>
+
+</body>
+
+</html>
