@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Armstrong</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+        <script>    
+            var n=parseInt(prompt("Enter armstrong no. :"));
+            var i,rem,arm=0,temp;
+            temp=n;
+            while(n!=0){
+                rem=n%10;
+                arm+=rem*rem*rem;
+                n=parseInt(n/10);
+            }
+
+            if(arm==temp){
+                document.write(temp + " is an armstrong no.")
+            }
+            else{
+                document.write(temp + " is not an armstrong no.")                
+            }
+        </script>
+</body>
+</html>
