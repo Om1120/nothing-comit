@@ -14,6 +14,9 @@
         var rows = prompt("Enter number of rows:");
 
         for (var i = 1; i <= rows; i++) {
+            for (var s = 5; s <= rows + i; s++) {
+                document.write("&nbsp;&nbsp;");
+            }
 
             for (var j = i; j <= rows; j++) {
                 document.write(j);
