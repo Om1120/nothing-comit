@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice</title>
+</head>
+
+<body>
+
+    <script>
+
+        // Creating a string variable
+        var city = "Surat";
+
+        // 1. big() function - makes the text bigger
+        document.write("<br>1. big()");
+        document.write("<br>" + city.big());
+
+        // 2. small() function - makes the text smaller
+        document.write("<br><br>2. small()");
+        document.write("<br>" + city.small());
+
+        // 3. bold() function - makes the text bold
+        document.write("<br><br>3. bold()");
+        document.write("<br>" + city.bold());
+
+        // 4. italics() function - makes the text italic
+        document.write("<br><br>4. italics()");
+        document.write("<br>" + city.italics());
+
+        // 5. strike() function - adds strike line on text
+        document.write("<br><br>5. strike()");
+        document.write("<br>" + city.strike());
+
+        // 6. fontcolor() function - changes text color
+        document.write("<br><br>6. fontcolor()");
+        document.write("<br>" + city.fontcolor('blue'));
+
+        // 7. fontsize() function - changes font size
+        document.write("<br><br>7. fontsize()");
+        document.write("<br>" + city.fontsize(5));
+
+        // 8. length property - returns the length of the string
+        document.write("<br><br>8. length");
+        var nm = "Good Morning";
+        var size = nm.length;
+        document.write("<br>Size of Good Morning is " + size);
+
+        // 9. charAt() function - returns the character at specified index
+        document.write("<br><br>9. charAt()");
+        var name = "Be Creative";
+        document.write("<br>" + name.charAt(0));
+
+        // 10. concat() function - concatenates two strings
+        document.write("<br><br>10. concat()");
+        var text = "Be Creative ";
+        document.write("<br>" + text.concat("Always Creative"));
+
+        // 11. indexOf() function - returns the index of first occurrence of specified value
+        document.write("<br><br>11. indexOf()<br>");
+        var name = "Be Creative";
+        document.write(name.indexOf("C"));
+
+        // 12. lastIndexOf() function - returns the index of last occurrence of specified value
+        document.write("<br><br>12. lastIndexOf()<br>");
+        var name = "Be Creative";
+        document.write(name.lastIndexOf("C"));
+
+        // 13. match() function - searches a string for a match against a regular expression, and returns the matches
+        document.write("<br><br>13. match()<br>");
+        var name = "Be Creative";
+        var mystr = name.match("Creative");
+        if (mystr != null) {
+            document.write("Your String is Match");
+        }
+        else {
+            document.write("Your String is Not Match");
+        }
+
+        // 14. replace() function - replaces a specified value with another value in a string
+        document.write("<br><br>14. replace()<br>");
+        var name = "Be Creative";
+        var mystr = (name.replace("Be", "Always"));
+        document.write(mystr);
+
+        // 15. search() function - searches a string for a specified value, and returns the position of the match
+        document.write("<br><br>15. search()<br>");
+        var name = "Be Creative";
+        var mystr = (name.search("Creative"));
+        if (mystr >= 0) {
+            document.write("Text Found");
+        } else {
+            document.write("Text Not Found");
+        }
+
+        // 16. slice() function - extracts a part of a string and returns the extracted part in a new string
+        document.write("<br><br>16. slice()<br>");
+        var name = "Be Creative";
+        document.write(name.slice(0, 2));
+        document.write("<br>" + name.slice(3, 11));
+
+        // 17. substr() function - returns a portion of the string, starting at the specified index and extending for a given number of characters
+        document.write("<br><br>17. substr()<br>");
+        var name = "Be Creative";
+        var mystr = (name.substr(1, 6));
+        document.write(mystr); 
+    </script>
+
+</body>
+
+</html>
