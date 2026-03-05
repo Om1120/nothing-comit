@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1 to N prime</title>
+</head>
+
+<body>
+
+<script>
+
+var n = parseInt(prompt("Enter value of n:"));
+var i = 1;
+var j, count;
+
+document.write("Prime numbers from 1 to " + n + " are:<br><br>");
+
+while (i <= n) {
+    count = 0;
+    j = 1;
+
+    while (j <= i) {
+        if (i % j == 0) {
+            count++;
+        }
+        j++;
+    }
+
+    if (count == 2) {
+        document.write(i + "<br>");
+    }
+
+    i++;
+}
+
+</script>
+
+</body>
+</html>

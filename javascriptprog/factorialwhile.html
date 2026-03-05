@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Factorial</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<script>
+
+var n = parseInt(prompt("Enter a number:"));
+var fact = 1;
+var i = 1;
+
+while (i <= n) {
+    fact = fact * i;
+    i++;
+}
+
+document.writeln("Factorial of " + n + " is: " + fact);
+
+</script>
+</body>
+
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fibonacci series</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<script>
+
+var n = parseInt(prompt("Enter the number of terms for Fibonacci series:"));
+var a = 0, b = 1, temp;
+var i = 1;
+
+document.write("<h2>Fibonacci Series:</h2>");
+
+while (i <= n) {
+    document.write(a + "<br>");
+    temp = a + b;
+    a = b;
+    b = temp;
+    i++;
+}
+
+</script>
+
+</body>
+</html>
