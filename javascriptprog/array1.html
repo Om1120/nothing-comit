@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display array with positions</title>
+</head>
+
+<body>
+    <script>
+
+        var n = parseInt(prompt("Enter number of elements:"));
+        var arr = [];
+
+        for (var i = 0; i < n; i++) {
+            arr[i] = prompt("Enter element:");
+        }
+
+        document.write("<h3>Array Elements with Position</h3>");
+
+        arr.forEach(function (element, index) {
+            document.write("Position " + index + " : " + element + "<br>");
+        });
+
+    </script>
+</body>
+
+</html>
