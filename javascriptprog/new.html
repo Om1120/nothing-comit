@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Day 21 - String Operations</title>
+</head>
+<body>
+    <h2>String Operations</h2>
+    
+    Name: <input type="text" id="strInput" value="Hello JavaScript"><br><br>
+    
+    <button onclick="makeBold()">Bold</button> <span id="outBold"></span><br><br>
+    <button onclick="makeItalic()">Italic</button> <span id="outItalic"></span><br><br>
+    <button onclick="makeLower()">To Lower</button> <span id="outLower"></span><br><br>
+    <button onclick="makeUpper()">To Upper</button> <span id="outUpper"></span><br><br>
+    
+    From: <input type="number" id="fromIdx" value="0" style="width: 50px;"> 
+    To: <input type="number" id="toIdx" value="5" style="width: 50px;">
+    <button onclick="makeSubStr()">Sub String</button> <span id="outSub"></span>
+
+    <script>
+        function getVal() { 
+            return document.getElementById("strInput").value;
+         }
+
+        function makeBold() {
+            document.getElementById("outBold").innerHTML = getVal().bold();
+        }
+        function makeItalic() {
+            document.getElementById("outItalic").innerHTML = getVal().italics();
+        }
+        function makeLower() {
+            document.getElementById("outLower").innerHTML = getVal().toLowerCase();
+        }
+        function makeUpper() {
+            document.getElementById("outUpper").innerHTML = getVal().toUpperCase();
+        }
+        function makeSubStr() {
+            let start = Number(document.getElementById("fromIdx").value);
+            let end = Number(document.getElementById("toIdx").value);
+            document.getElementById("outSub").innerHTML = getVal().substring(start, end);
+        }
+    </script>
+</body>
+</html>
