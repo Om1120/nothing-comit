@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        var n = parseInt(prompt("Enter number of elements:"));
+        var arr = [];
+
+        for (var i = 0; i < n; i++) {
+            arr[i] = prompt("Enter value for index " + i);
+        }
+
+        var find = prompt("Enter value to find:");
+        var replace = prompt("Enter value to replace with:");
+
+        arr.forEach(function (element, index) {
+            if (element == find) {
+                arr[index] = replace;
+            }
+        });
+
+        document.write("<h3>update karelo array</h3>");
+
+        arr.forEach(function (element) {
+            document.write(element + "<br>");
+        });
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        var n = parseInt(prompt("Enter number of elements:"));
+        var arr = [];
+
+        for (var i = 0; i < n; i++) {
+            arr[i] = parseInt(prompt("Enter value for index " + i));
+        }
+
+        var sum = 0;
+        var min = arr[0];
+        var max = arr[0];
+
+        arr.forEach(function (element) {
+            sum += element;
+
+            if (element < min) {
+                min = element;
+            }
+
+            if (element > max) {
+                max = element;
+            }
+        });
+
+        document.write("<h3>Array Elements</h3>");
+        arr.forEach(function (element) {
+            document.write(element + "<br>");
+        });
+
+        document.write("<br>Sum = " + sum);
+        document.write("<br>Min = " + min);
+        document.write("<br>Max = " + max);
+
+    </script>
+
+</body>
+
+</html>

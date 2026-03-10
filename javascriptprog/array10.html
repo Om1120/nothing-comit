@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        var n = parseInt(prompt("Enter number of elements:"));
+        var arr = [];
+
+        for (var i = 0; i < n; i++) {
+            arr[i] = parseInt(prompt("Enter value for index " + i));
+        }
+
+        document.write("<h3>Odd Values from Array</h3>");
+
+        arr.forEach(function (element) {
+            if (element % 2 != 0) {
+                document.write(element + "<br>");
+            }
+        });
+
+    </script>
+</body>
+
+</html>

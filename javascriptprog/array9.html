@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        var r = parseInt(prompt("Enter number of rows:"));
+        var c = parseInt(prompt("Enter number of columns:"));
+
+        var arr = [];
+
+        for (var i = 0; i < r; i++) {
+            arr[i] = [];
+            for (var j = 0; j < c; j++) {
+                arr[i][j] = parseInt(prompt("Enter value for [" + i + "][" + j + "]"));
+            }
+        }
+
+        document.write("<h3>Row Wise Sum</h3>");
+
+        for (var i = 0; i < r; i++) {
+            var rsum = 0;
+            for (var j = 0; j < c; j++) {
+                rsum += arr[i][j];
+            }
+            document.write("Row " + i + " Sum = " + rsum + "<br>");
+        }
+
+        document.write("<h3>Column Wise Sum</h3>");
+
+        for (var j = 0; j < c; j++) {
+            var csum = 0;
+            for (var i = 0; i < r; i++) {
+                csum += arr[i][j];
+            }
+            document.write("Column " + j + " Sum = " + csum + "<br>");
+        }
+
+    </script>
+</body>
+
+</html>

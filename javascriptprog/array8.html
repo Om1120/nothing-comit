@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        var n = parseInt(prompt("Enter number of elements:"));
+        var arr = [];
+
+        for (var i = 0; i < n; i++) {
+            arr[i] = prompt("Enter value for index " + i);
+        }
+
+        var insertValue = prompt("Enter value to insert:");
+        var insertIndex = parseInt(prompt("Enter index to insert at:"));
+
+        arr.splice(insertIndex, 0, insertValue);
+
+        var deleteIndex = parseInt(prompt("Enter index to delete:"));
+
+        arr.splice(deleteIndex, 1);
+
+        document.write("<h3>Final Array</h3>");
+
+        arr.forEach(function (element) {
+            document.write(element + "<br>");
+        });
+
+    </script>
+</body>
+
+</html>
