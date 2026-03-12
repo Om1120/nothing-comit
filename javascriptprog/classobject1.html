@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sum div mul sub</title>
+</head>
+
+<body>
+    <script>
+
+        class Calculator {
+            constructor(a, b) {
+                this.a = a;
+                this.b = b;
+            }
+
+            sum() {
+                return this.a + this.b;
+            }
+
+            sub() {
+                return this.a - this.b;
+            }
+
+            mul() {
+                return this.a * this.b;
+            }
+
+            div() {
+                return this.a / this.b;
+            }
+        }
+
+        var x = parseInt(prompt("Enter first number:"));
+        var y = parseInt(prompt("Enter second number:"));
+
+        var obj = new Calculator(x, y);
+
+        document.write("First Number : " + x + "<br>");
+        document.write("Second Number : " + y + "<br><br>");
+
+        document.write("Sum = " + obj.sum() + "<br>");
+        document.write("Subtraction = " + obj.sub() + "<br>");
+        document.write("Multiplication = " + obj.mul() + "<br>");
+        document.write("Division = " + obj.div() + "<br>");
+
+    </script>
+</body>
+
+</html>
