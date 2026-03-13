@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+</head>
+
+<body>
+
+    <form method="post" onsubmit="return formsubmit()">
+
+        <label>Name:</label>
+        <input type="text" id="name" name="name"><br><br>
+
+        <label>Email:</label>
+        <input type="email" id="mail" name="email"><br><br>
+
+        <label>Password:</label>
+        <input type="password" id="password" name="password"><br><br>
+
+        <label>Gender:</label>
+        <input type="radio" name="gender" class="gender" value="male"> Male
+        <input type="radio" name="gender" class="gender" value="female"> Female
+        <br><br>
+
+        <label>Hobbies:</label><br>
+
+        <input type="checkbox" class="hobi" name="hobbies[]" value="reading"> Reading <br>
+        <input type="checkbox" class="hobi" name="hobbies[]" value="music"> Music <br>
+        <input type="checkbox" class="hobi" name="hobbies[]" value="sports"> Sports <br>
+        <input type="checkbox" class="hobi" name="hobbies[]" value="travel"> Travel <br><br>
+
+        <label>Course:</label>
+
+        <select name="course" id="course">
+            <option value="">Select Course</option>
+            <option value="Web Development">Web Development</option>
+            <option value="Data Science">Data Science</option>
+            <option value="Mobile App Development">MIM</option>
+        </select>
+
+        <br><br>
+
+        <input type="submit" value="Submit">
+        <input type="reset" value="Reset">
+
+    </form>
+
+    <script>
+
+        function formsubmit() {
+
+            let name = document.getElementById("name").value;
+            let mail = document.getElementById("mail").value;
+            let course = document.getElementById("course").value;
+            let password = document.getElementById("password").value;
+            let gender = document.getElementsByClassName("gender");
+            let hobi = document.getElementsByClassName("hobi");
+
+            console.log("Name:", name);
+            console.log("Email:", mail);
+            console.log("Course:", course);
+            console.log("Password:",password);
+            for (let i = 0; i < gender.length; i++) {
+                if (gender[i].checked) {
+                    console.log("Gender:", gender[i].value);
+                }
+            }
+
+            for (let i = 0; i < hobi.length; i++) {
+                if (hobi[i].checked) {
+                    console.log("Hobby:", hobi[i].value);
+                }
+            }
+
+            return false;
+
+        }
+
+    </script>
+
+</body>
+
+</html>

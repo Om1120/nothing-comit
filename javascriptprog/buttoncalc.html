@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Button calculator</title>
+</head>
+<body>
+    <h2>Calculator</h2>
+    
+    No 1: <input type="number" id="num1"><br><br>
+    No 2: <input type="number" id="num2"><br><br>
+    
+    <button onclick="calculate('+')">+</button>
+    <button onclick="calculate('-')">-</button>
+    <button onclick="calculate('*')">*</button>
+    <button onclick="calculate('/')">/</button>
+    
+    <h3 id="answer">result: </h3>
+
+    <script>
+        function calculate(operator) {
+            let n1 = Number(document.getElementById("num1").value);
+            let n2 = Number(document.getElementById("num2").value);
+            let result = 0;
+
+            if (operator === '+') {
+                result = n1 + n2;
+            } else if (operator === '-') {
+                result = n1 - n2;
+            }
+             else if (operator === '*') {
+                result = n1 * n2;
+            }
+             else if (operator === '/') {
+                result = n1 / n2;
+            }
+            
+            document.getElementById("answer").innerHTML = "Ans: " + result;
+        }
+    </script>
+</body>
+</html>

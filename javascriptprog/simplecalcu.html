@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple calc</title>
+</head>
+
+<body>
+    No1:<input type="text" id="no1"><br><br>
+    No2:<input type="text" id="no2"><br><br>
+
+    <input type="button" value="sum" onclick="sum()"><br><br>
+    Result : <span id="ans"></span>
+
+    <script>
+        let no1 = document.getElementById("no1");
+        let no2 = document.getElementById("no2");
+        let ans = document.getElementById("ans");
+
+        function sum() {
+            console.log("ans.tagname")
+            Num1 = parseInt(no1.value)
+            Num2 = parseInt(no2.value)
+            sum = Num1 + Num2
+            ans.innerHTML = "<h1>" + sum + "</h1>"
+        }
+    </script>
+
+</body>
+
+</html>
