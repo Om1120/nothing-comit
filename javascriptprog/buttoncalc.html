@@ -14,7 +14,7 @@
     <button onclick="calculate('*')">*</button>
     <button onclick="calculate('/')">/</button>
     
-    <h3 id="answer">result: </h3>
+    <h3 id="answer">Result: </h3>
 
     <script>
         function calculate(operator) {
@@ -33,8 +33,8 @@
              else if (operator === '/') {
                 result = n1 / n2;
             }
-            
-            document.getElementById("answer").innerHTML = "Ans: " + result;
+           
+            document.getElementById("answer").innerHTML = "Result: " + result;
         }
     </script>
 </body>

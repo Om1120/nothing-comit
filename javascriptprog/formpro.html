@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Creative Form</title>
+
+<style>
+    body {
+        font-family: Arial;
+        background: linear-gradient(to right, #4facfe, #00f2fe);
+        margin: 0;
+        padding: 0;
+    }
+
+    section {
+        width: 500px;
+        margin: 40px auto;
+        background: white;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 15px rgba(0,0,0,0.3);
+    }
+
+    h1 {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+    td {
+        padding: 8px;
+    }
+
+    input, textarea, select {
+        width: 100%;
+        padding: 6px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+    }
+
+    input[type="checkbox"],
+    input[type="radio"] {
+        width: auto;
+    }
+
+    input[type="button"] {
+        background: #4facfe;
+        color: white;
+        border: none;
+        padding: 8px 15px;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    input[type="reset"] {
+        background: gray;
+        color: white;
+        border: none;
+        padding: 8px 15px;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    input[type="button"]:hover {
+        background: #007bff;
+    }
+
+    input[type="reset"]:hover {
+        background: #555;
+    }
+</style>
+
+</head>
+
+<body>
+
+<section>
+
+<h1>Creative Registration Form</h1>
+
+<table border="1" cellpadding="8">
+
+<tr>
+<td>First Name</td>
+<td><input type="text" id="fname"></td>
+</tr>
+
+<tr>
+<td>Last Name</td>
+<td><input type="text" id="lname"></td>
+</tr>
+
+<tr>
+<td>Email Address</td>
+<td><input type="email" id="email"></td>
+</tr>
+
+<tr>
+<td>ADDRESS</td>
+<td><textarea id="address" rows="3"></textarea></td>
+</tr>
+
+<tr>
+<td>Password</td>
+<td><input type="password" id="pass"></td>
+</tr>
+
+<tr>
+<td>Phone Number</td>
+<td><input type="number" id="phone"></td>
+</tr>
+
+<tr>
+<td>Date of Birth</td>
+<td><input type="date" id="dob"></td>
+</tr>
+
+<tr>
+<td>Preferred Time</td>
+<td><input type="time" id="time"></td>
+</tr>
+
+<tr>
+<td>Favorite Color</td>
+<td><input type="color" id="color"></td>
+</tr>
+
+<tr>
+<td>Satisfaction Level</td>
+<td><input type="range" id="range" min="0" max="10"></td>
+</tr>
+
+<tr>
+<td>Upload Photo</td>
+<td><input type="file" id="photo"></td>
+</tr>
+
+<tr>
+<td>Website URL</td>
+<td><input type="url" id="url"></td>
+</tr>
+
+<tr>
+<td>Search Something</td>
+<td><input type="search" id="search"></td>
+</tr>
+
+<tr>
+<td>Hobbies</td>
+<td>
+<input type="checkbox" class="hob" value="Reading"> Reading
+<input type="checkbox" class="hob" value="Music"> Music
+<input type="checkbox" class="hob" value="Guitar"> Guitar
+<input type="checkbox" class="hob" value="Art"> Art
+</td>
+</tr>
+
+<tr>
+<td>Gender</td>
+<td>
+<input type="radio" name="gender" value="Male"> Male
+<input type="radio" name="gender" value="Female"> Female
+</td>
+</tr>
+
+<tr>
+<td>Country</td>
+<td>
+<select id="country">
+<option>Select Country</option>
+<option>India</option>
+<option>USA</option>
+<option>UK</option>
+<option>Canada</option>
+</select>
+</td>
+</tr>
+
+<tr>
+<td colspan="2" align="center">
+<input type="button" value="Submit" onclick="showData()">
+<input type="reset" value="Reset">
+</td>
+</tr>
+
+</table>
+
+</section>
+
+<script>
+// your same JS (no change)
+function showData() {
+
+    let fname = document.getElementById("fname").value;
+    let lname = document.getElementById("lname").value;
+    let email = document.getElementById("email").value;
+    let address = document.getElementById("address").value;
+    let pass = document.getElementById("pass").value;
+    let phone = document.getElementById("phone").value;
+    let dob = document.getElementById("dob").value;
+    let time = document.getElementById("time").value;
+    let color = document.getElementById("color").value;
+    let range = document.getElementById("range").value;
+    let url = document.getElementById("url").value;
+    let search = document.getElementById("search").value;
+    let country = document.getElementById("country").value;
+
+    let hobbies = "";
+    let h = document.getElementsByClassName("hob");
+
+    for (let i = 0; i < h.length; i++) {
+        if (h[i].checked) {
+            hobbies += h[i].value + " ";
+        }
+    }
+
+    let gender = "";
+    let g = document.getElementsByName("gender");
+
+    for (let i = 0; i < g.length; i++) {
+        if (g[i].checked) {
+            gender = g[i].value;
+        }
+    }
+
+    document.writeln("Name: " + fname + " " + lname + "<br>");
+    document.writeln("About : " + address + "<br>");
+    document.writeln("Email : " + email + "<br>");
+    document.writeln("Phone : " + phone + "<br>");
+    document.writeln("DOB : " + dob + "<br>");
+    document.writeln("Time : " + time + "<br>");
+    document.writeln("Color : " + color + "<br>");
+    document.writeln("Range : " + range + "<br>");
+    document.writeln("Hobbies : " + hobbies + "<br>");
+    document.writeln("Gender : " + gender + "<br>");
+    document.writeln("Country : " + country + "<br>");
+    document.writeln("Website : " + url + "<br>");
+    document.writeln("Search : " + search + "<br>");
+}
+</script>
+
+</body>
+</html>
