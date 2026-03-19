@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+
+    <style>
+        body {
+            background-color: #f4f4f4;
+            font-family: Arial;
+        }
+
+        table {
+            background-color: #ffffff;
+            border-radius: 15px;
+            box-shadow: 0px 5px 15px rgba(0,0,0,0.2);
+        }
+
+        td {
+            text-align: center;
+            font-size: 20px;
+            cursor: pointer;
+            border-radius: 10px;
+            transition: 0.2s;
+        }
+
+        td:hover {
+            background-color: #e0e0e0;
+        }
+
+        input {
+            border-radius: 10px;
+            padding: 10px;
+            border: 1px solid #ccc;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <table align="center" border="2px" cellpadding="30px">
+        <tr>
+            <td colspan="4">
+                <input type="text" id="result" style="width: 100%; font-size: 20px;" readonly>
+            </td>
+        </tr>
+
+        <tr>
+            <td onclick="addValue('1')">1</td>
+            <td onclick="addValue('2')">2</td>
+            <td onclick="addValue('3')">3</td>
+            <td onclick="addValue('+')">+</td>
+        </tr>
+
+        <tr>
+            <td onclick="addValue('4')">4</td>
+            <td onclick="addValue('5')">5</td>
+            <td onclick="addValue('6')">6</td>
+            <td onclick="addValue('-')">-</td>
+        </tr>
+
+        <tr>
+            <td onclick="addValue('7')">7</td>
+            <td onclick="addValue('8')">8</td>
+            <td onclick="addValue('9')">9</td>
+            <td onclick="addValue('*')">*</td>
+        </tr>
+
+        <tr>
+            <td colspan="3" align="center" onclick="addValue('0')">0</td>
+            <td tabindex="0" onclick="calculate()" onkeydown="enter(event)">=</td>
+        </tr>
+        
+    </table>
+
+    <script>
+
+        let data;
+        let answer;
+
+        function addValue(val) {
+            document.getElementById("result").value += val;
+        }
+
+        function calculate() {
+            data = document.getElementById("result").value;
+
+            answer = eval(data);
+
+            document.getElementById("result").value = answer;
+        }
+
+        function enter(event){
+            if(event.key === "Enter"){
+                calculate();
+            }
+        }
+    </script>
+
+</body>
+
+</html>
