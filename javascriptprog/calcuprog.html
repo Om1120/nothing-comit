@@ -15,7 +15,7 @@
         table {
             background-color: #ffffff;
             border-radius: 15px;
-            box-shadow: 0px 5px 15px rgba(0,0,0,0.2);
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
         }
 
         td {
@@ -52,53 +52,79 @@
             <td onclick="addValue('1')">1</td>
             <td onclick="addValue('2')">2</td>
             <td onclick="addValue('3')">3</td>
-            <td onclick="addValue('+')">+</td>
+            <td onclick="setOperator('+')">+</td>
         </tr>
 
         <tr>
             <td onclick="addValue('4')">4</td>
             <td onclick="addValue('5')">5</td>
             <td onclick="addValue('6')">6</td>
-            <td onclick="addValue('-')">-</td>
+            <td onclick="setOperator('-')">-</td>
         </tr>
 
         <tr>
             <td onclick="addValue('7')">7</td>
             <td onclick="addValue('8')">8</td>
             <td onclick="addValue('9')">9</td>
-            <td onclick="addValue('*')">*</td>
+            <td onclick="setOperator('*')">*</td>
         </tr>
 
         <tr>
-            <td colspan="3" align="center" onclick="addValue('0')">0</td>
-            <td tabindex="0" onclick="calculate()" onkeydown="enter(event)">=</td>
+            <td colspan="3" onclick="addValue('0')">0</td>
+            <td onclick="calculate()">=</td>
         </tr>
-        
+
     </table>
 
-    <script>
+<script>
+    var first = "";
+    var second = "";
+    var operator = "";
 
-        let data;
-        let answer;
+    function addValue(val) {
+        if (operator === "") {
+            first += val;
+            document.getElementById("result").value = first;
+        } else {
+            second += val;
+            document.getElementById("result").value = first + operator + second;
+        }
+    }
 
-        function addValue(val) {
-            document.getElementById("result").value += val;
+    function setOperator(op) {
+
+        if (first !== "" && second !== "") {
+            calculate();
         }
 
-        function calculate() {
-            data = document.getElementById("result").value;
+        if (first !== "") {
+            operator = op;
+            document.getElementById("result").value = first + operator;
+        }
+    }
 
-            answer = eval(data);
+    function calculate() {
+        var num1 = Number(first);
+        var num2 = Number(second);
+        var result = 0;
 
-            document.getElementById("result").value = answer;
+        if (operator === "+") {
+            result = num1 + num2;
+        }
+        else if (operator === "-") {
+            result = num1 - num2;
+        }
+        else if (operator === "*") {
+            result = num1 * num2;
         }
 
-        function enter(event){
-            if(event.key === "Enter"){
-                calculate();
-            }
-        }
-    </script>
+        document.getElementById("result").value = result;
+
+        first = result.toString();
+        second = "";
+        operator = "";
+    }
+</script>
 
 </body>
 
