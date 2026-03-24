@@ -1,223 +1,275 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional MUthhal nihal</title>
 
-<title>Om's Restaurant</title>
-<!-- Bootstrap CSS -->
-<link rel="stylesheet" href="./bootstrap.min.css">
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
-<style>
-.hero{
-background:url("https://images.unsplash.com/photo-1504674900247-0877df9cc836");
-background-size:cover;
-height:90vh;
-color:white;
-display:flex;
-align-items:center;
-justify-content:center;
-text-align:center;
-}
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-.hero h1{
-font-size:60px;
-font-weight:bold;
-}
+    <style>
+        body {
+            font-family: Arial;
+            background: #f2f2f2;
+            overflow-x: hidden;
+        }
 
-.gallery img{
-height:250px;
-object-fit:cover;
-}
-</style>
+        /* Navbar */
+        .navbar-custom {
+            background: white;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 15px;
+            margin: 20px;
+            padding: 10px 20px;
+        }
 
+        .logo {
+            background: black;
+            color: white;
+            padding: 8px 12px;
+            border-radius: 10px;
+            font-weight: bold;
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 60px 20px;
+            position: relative;
+        }
+
+        .big-text {
+            font-size: 110px;
+            font-weight: bold;
+            color: black;
+            opacity: 0.08;
+            position: absolute;
+            top: 60px;
+            width: 100%;
+            text-align: center;
+            z-index: -1;
+        }
+
+        .outline-text {
+            -webkit-text-stroke: 1px black;
+            color: transparent;
+        }
+
+        /* Image wrapper for glow */
+        .img-box {
+            position: relative;
+            display: inline-block;
+        }
+
+        .img-box::before {
+            content: '';
+            position: absolute;
+            width: 350px;
+            height: 350px;
+            background: rgba(0, 0, 0, 0.1);
+            border-radius: 50%;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: -1;
+            filter: blur(40px);
+        }
+
+        .profile-img {
+            max-width: 500px;
+            width: 100%;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        /* Sections */
+        .section {
+            padding: 60px 0;
+        }
+
+        .card {
+            border: none;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        /* Buttons */
+        .btn-custom {
+            background: black;
+            color: white;
+            border: none;
+        }
+
+        .btn-custom:hover {
+            background: #333;
+        }
+
+        /* Social Icons */
+        .social-icons i {
+            margin: 5px;
+            font-size: 18px;
+            border: 1px solid black;
+            padding: 6px;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+
+        .social-icons i:hover {
+            background: black;
+            color: white;
+        }
+
+        /* Animation */
+        @keyframes float {
+            0% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(-20px);
+            }
+
+            100% {
+                transform: translateY(0px);
+            }
+        }
+
+        /* Footer */
+        .footer {
+            background: black;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+    </style>
 </head>
+
 <body>
 
-<!-- Navbar -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-<div class="container">
+    <!-- Navbar -->
+    <div class="container">
+        <div class="d-flex justify-content-between align-items-center navbar-custom">
+            <div class="logo">C.</div>
 
-<a class="navbar-brand" href="#">Om's Restaurant</a>
+            <div>
+                <a href="#home" class="mx-3 text-dark">Home</a>
+                <a href="#about" class="mx-3 text-dark">About</a>
+                <a href="#contact" class="mx-3 text-dark">Contact</a>
+            </div>
 
-<button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu">
-<span class="navbar-toggler-icon"></span>
-</button>
+            <button class="btn btn-custom">Hire Me</button>
+        </div>
+    </div>
 
-<div class="collapse navbar-collapse" id="menu">
-<ul class="navbar-nav ms-auto">
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="big-text">CREATIVE MUTHAL</div>
 
-<li class="nav-item">
-<a class="nav-link" href="#">Home</a>
-</li>
+        <div class="container">
+            <div class="row align-items-center text-center text-md-start">
 
-<li class="nav-item">
-<a class="nav-link" href="#menufood">Menu</a>
-</li>
+                <div class="col-md-4">
+                    <h2>I AM A</h2>
+                    <h1 class="outline-text">CREATIVE</h1>
+                    <h1>MUTHAL</h1>
+                </div>
 
-<li class="nav-item">
-<a class="nav-link" href="#gallery">Gallery</a>
-</li>
+                <div class="col-md-4 text-center">
+                    <div class="img-box">
+                        <img src="../nilu-removebg-preview.png" class="profile-img" alt="profile">
+                    </div>
+                </div>
 
-<li class="nav-item">
-<a class="nav-link" href="#about">About</a>
-</li>
+                <div class="col-md-4">
+                    <p>
+                        Specialized in standing muthhi ,sitting muthhi and also i can do masterbet in any situation.
+                    </p>
 
-<li class="nav-item">
-<a class="nav-link" href="#contact">Contact</a>
-</li>
+                    <div class="social-icons">
+                        <i class="fab fa-facebook"></i>
+                        <i class="fab fa-instagram"></i>
+                        <i class="fab fa-twitter"></i>
+                    </div>
+                </div>
 
-</ul>
-</div>
+            </div>
+        </div>
+    </section>
 
-</div>
-</nav>
+    <!-- About -->
+    <section id="about" class="section">
+        <div class="container text-center">
+            <h2>About Me</h2>
+            <p>I can kiss my own muthhi.</p>
+        </div>
+    </section>
 
-<!-- Hero Section -->
-<section class="hero">
-<div>
-<h1>Welcome to Om's Restaurant</h1>
-<p>Delicious Food | Fresh Ingredients</p>
-<a href="#menufood" class="btn btn-warning btn-lg">View Menu</a>
-</div>
-</section>
+    <!-- Portfolio -->
+    <section id="portfolio" class="section bg-light">
+        <div class="container">
+            <h2 class="text-center">My Work</h2>
 
-<!-- Menu Section -->
-<section id="menufood" class="py-5">
-<div class="container">
+            <div class="row">
 
-<h2 class="text-center mb-4">Our Menu</h2>
+                <div class="col-md-4">
+                    <div class="card p-3">
+                        <h5>Project 1</h5>
+                        <p>standing muthhi</p>
+                    </div>
+                </div>
 
-<div class="row">
+                <div class="col-md-4">
+                    <div class="card p-3">
+                        <h5>Project 2</h5>
+                        <p>lying muthhi</p>
+                    </div>
+                </div>
 
-<div class="col-md-4">
-<div class="card">
-<img src="https://images.unsplash.com/photo-1594007654729-407eedc4fe24" class="card-img-top">
-<div class="card-body text-center">
-<h5 class="card-title">Pizza</h5>
-<p>Price: ₹250</p>
+                <div class="col-md-4">
+                    <div class="card p-3">
+                        <h5>Project 3</h5>
+                        <p>sitting muthhi</p>
+                    </div>
+                </div>
 
-<a href="https://wa.me/919999999999?text=I%20want%20to%20order%20Pizza" class="btn btn-success">
-Order Now
-</a>
+            </div>
+        </div>
+    </section>
 
-</div>
-</div>
-</div>
+    <!-- Contact -->
+    <section id="contact" class="section">
+        <div class="container text-center">
+            <h2>Contact Me</h2>
 
-<div class="col-md-4">
-<div class="card">
-<img src="https://images.unsplash.com/photo-1550547660-d9450f859349" class="card-img-top">
-<div class="card-body text-center">
-<h5 class="card-title">Burger</h5>
-<p>Price: ₹150</p>
+            <input type="text" class="form-control mb-2" placeholder="Your Name">
+            <input type="email" class="form-control mb-2" placeholder="Email">
+            <textarea class="form-control mb-2" placeholder="your place"></textarea>
 
-<a href="https://wa.me/919999999999?text=I%20want%20to%20order%20Burger" class="btn btn-success">
-Order Now
-</a>
+            <button class="btn btn-custom">Send</button>
+        </div>
+    </section>
 
-</div>
-</div>
-</div>
+    <!-- Footer -->
+    <div class="footer">
+        <p>© 2026 My Portfolio</p>
 
-<div class="col-md-4">
-<div class="card">
-<img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c" class="card-img-top">
-<div class="card-body text-center">
-<h5 class="card-title">Pasta</h5>
-<p>Price: ₹200</p>
+        <div class="social-icons">
+            <i class="fab fa-facebook"></i>
+            <i class="fab fa-instagram"></i>
+            <i class="fab fa-twitter"></i>
+        </div>
+    </div>
 
-<a href="https://wa.me/919999999999?text=I%20want%20to%20order%20Pasta" class="btn btn-success">
-Order Now
-</a>
-
-</div>
-</div>
-</div>
-
-</div>
-</div>
-</section>
-
-<!-- Gallery -->
-<section id="gallery" class="py-5 bg-light">
-<div class="container">
-
-<h2 class="text-center mb-4">Gallery</h2>
-
-<div class="row gallery">
-
-<div class="col-md-4">
-<img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836" class="img-fluid">
-</div>
-
-<div class="col-md-4">
-<img src="https://images.unsplash.com/photo-1512058564366-c9e3e046d8a0" class="img-fluid">
-</div>
-
-<div class="col-md-4">
-<img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1" class="img-fluid">
-</div>
-
-</div>
-
-</div>
-</section>
-
-<!-- About -->
-<section id="about" class="py-5">
-<div class="container">
-
-<h2 class="text-center mb-4">About Us</h2>
-
-<p class="text-center">
-Om's Restaurant serves fresh and delicious vegetarian food.  
-Our goal is to provide quality meals with great taste and service.
-</p>
-
-</div>
-</section>
-
-<!-- Contact -->
-<section id="contact" class="py-5 bg-light">
-<div class="container">
-
-<h2 class="text-center mb-4">Contact Us</h2>
-
-<div class="row">
-
-<div class="col-md-6">
-<input class="form-control mb-3" placeholder="Your Name">
-<input class="form-control mb-3" placeholder="Email">
-<textarea class="form-control mb-3" placeholder="Message"></textarea>
-<button class="btn btn-primary">Send Message</button>
-</div>
-
-<div class="col-md-6">
-
-<h5>Address</h5>
-<p>Ahmedabad, Gujarat</p>
-
-<h5>Phone</h5>
-<p>+91 9999999999</p>
-
-<h5>Opening Hours</h5>
-<p>10 AM - 11 PM</p>
-
-</div>
-
-</div>
-
-</div>
-</section>
-
-<!-- Footer -->
-<footer class="bg-dark text-white text-center p-3">
-<p>© 2026 Om's Restaurant | All Rights Reserved</p>
-</footer>
-
-<!-- Bootstrap JS -->
-<script src="../bootstrap-5.3.8-dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
+
 </html>

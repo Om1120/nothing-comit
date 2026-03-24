@@ -7,138 +7,107 @@
     <title>Calculator</title>
 
     <style>
-        body {
-            background-color: #f4f4f4;
-            font-family: Arial;
-        }
-
         table {
-            background-color: #ffffff;
-            border-radius: 15px;
-            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
         }
 
         td {
-            text-align: center;
-            font-size: 20px;
+            border-radius: 8px;
             cursor: pointer;
-            border-radius: 10px;
-            transition: 0.2s;
-        }
-
-        td:hover {
-            background-color: #e0e0e0;
         }
 
         input {
-            border-radius: 10px;
-            padding: 10px;
-            border: 1px solid #ccc;
+            border-radius: 8px;
         }
     </style>
-
 </head>
 
 <body>
 
-        <table align="center" border="2" cellpadding="20">
-            <tr>
-                <td colspan="3">
-                    <input type="text" id="result" readonly>
-                </td>
-                <td onclick="clearData()">C</td>
-            </tr>
+    <table align="center" border="2" cellpadding="30">
+        <tr>
+            <td colspan="3">
+                <input type="text" id="result" readonly>
+            </td>
+            <td onclick="rem()">C</td>
+        </tr>
 
-            <tr>
-                <td onclick="press(1)">1</td>
-                <td onclick="press(2)">2</td>
-                <td onclick="press(3)">3</td>
-                <td onclick="operator('+')">+</td>
-            </tr>
+        <tr>
+            <td onclick="addValue('1')">1</td>
+            <td onclick="addValue('2')">2</td>
+            <td onclick="addValue('3')">3</td>
+            <td onclick="addValue('+')">+</td>
+        </tr>
 
-            <tr>
-                <td onclick="press(4)">4</td>
-                <td onclick="press(5)">5</td>
-                <td onclick="press(6)">6</td>
-                <td onclick="operator('-')">-</td>
-            </tr>
+        <tr>
+            <td onclick="addValue('4')">4</td>
+            <td onclick="addValue('5')">5</td>
+            <td onclick="addValue('6')">6</td>
+            <td onclick="addValue('-')">-</td>
+        </tr>
 
-            <tr>
-                <td onclick="press(7)">7</td>
-                <td onclick="press(8)">8</td>
-                <td onclick="press(9)">9</td>
-                <td onclick="operator('*')">*</td>
-            </tr>
+        <tr>
+            <td onclick="addValue('7')">7</td>
+            <td onclick="addValue('8')">8</td>
+            <td onclick="addValue('9')">9</td>
+            <td onclick="addValue('*')">*</td>
+        </tr>
 
-            <tr>
-                <td colspan="2" onclick="press(0)">0</td>
-                <td onclick="operator('/')">/</td>
-                <td onclick="operator('%')">%</td>
-            </tr>
+        <tr>
+            <td colspan="2" onclick="addValue('0')">0</td>
+            <td onclick="addValue('/')">/</td>
+            <td onclick="addValue('%')">%</td>
+        </tr>
 
-            <tr>
-                <td colspan="4" onclick="calculate()">=</td>
-            </tr>
-        </table>
+        <tr>
+            <td colspan="4" onclick="calculate()">=</td>
+        </tr>
+    </table>
 
-        <script>
-            var num1 = "";
-            var num2 = "";
-            var op = "";
+    <script>
+        var data;
+        var ans;
 
-            function press(value) {
-                if (op == "") {
-                    num1 = num1 + value;
-                    document.getElementById("result").value = num1;
-                } else {
-                    num2 = num2 + value;
-                    document.getElementById("result").value = num1 + op + num2;
+        function addValue(val) {
+            document.getElementById("result").value += val;
+        }
+
+        function calculate() {
+            data = document.getElementById("result").value;
+
+            var numbers = data.split(/[\+\-\*\/\%]/);
+            var operators = data.replace(/[0-9]/g, "").split("");
+
+            ans = parseFloat(numbers[0]);
+
+            for (var i = 0; i < operators.length; i++) {
+                var num = parseFloat(numbers[i + 1]);
+
+                if (operators[i] == "+") {
+                    ans = ans + num;
+                }
+                else if (operators[i] == "-") {
+                    ans = ans - num;
+                }
+                else if (operators[i] == "*") {
+                    ans = ans * num;
+                }
+                else if (operators[i] == "/") {
+                    ans = ans / num;
+                }
+                else if (operators[i] == "%") {
+                    ans = ans % num;
                 }
             }
 
-            function operator(value) {
-                if (num1 != "") {
-                    op = value;
-                    document.getElementById("result").value = num1 + op;
-                }
-            }
+            document.getElementById("result").value = ans;
+        }
 
-            function calculate() {
-                var n1 = parseFloat(num1);
-                var n2 = parseFloat(num2);
-                var ans = 0;
+        function rem() {
+            document.getElementById("result").value = "";
+        }
+    </script>
 
-                if (op == "+") {
-                    ans = n1 + n2;
-                }
-                else if (op == "-") {
-                    ans = n1 - n2;
-                }
-                else if (op == "*") {
-                    ans = n1 * n2;
-                }
-                else if (op == "/") {
-                    ans = n1 / n2;
-                }
-                else if (op == "%") {
-                    ans = n1 % n2;
-                }
+</body>
 
-                document.getElementById("result").value = ans;
-
-                num1 = ans;
-                num2 = "";
-                op = "";
-            }
-
-            function clearData() {
-                num1 = "";
-                num2 = "";
-                op = "";
-                document.getElementById("result").value = "";
-            }
-        </script>
-
-    </body>
-
-    </html>
+</html>
