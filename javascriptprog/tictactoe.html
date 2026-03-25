@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Tic Tac Toe</title>
+</head>
+
+<style>
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background: #f4f4f4;
+        font-family: Arial;
+        margin: 0;
+    }
+
+    table {
+        border-spacing: 10px;
+    }
+
+    td {
+        width: 90px;
+        height: 90px;
+        background: white;
+        border: 2px solid #333;
+        text-align: center;
+        font-size: 40px;
+        font-weight: bold;
+        cursor: pointer;
+    }
+
+    td:hover {
+        background: #ddd;
+    }
+</style>
+
+<body>
+
+    <table>
+        <tr>
+            <td onclick="play(this,0)"></td>
+            <td onclick="play(this,1)"></td>
+            <td onclick="play(this,2)"></td>
+        </tr>
+        <tr>
+            <td onclick="play(this,3)"></td>
+            <td onclick="play(this,4)"></td>
+            <td onclick="play(this,5)"></td>
+        </tr>
+        <tr>
+            <td onclick="play(this,6)"></td>
+            <td onclick="play(this,7)"></td>
+            <td onclick="play(this,8)"></td>
+        </tr>
+    </table>
+
+    <script>
+        let turn = "O";
+
+        let b0 = "", b1 = "", b2 = "", b3 = "", b4 = "", b5 = "", b6 = "", b7 = "", b8 = "";
+
+        function play(box, index) {
+
+            if (box.innerHTML === "") {
+
+                box.innerHTML = turn;
+
+                if (index == 0) b0 = turn;
+                if (index == 1) b1 = turn;
+                if (index == 2) b2 = turn;
+                if (index == 3) b3 = turn;
+                if (index == 4) b4 = turn;
+                if (index == 5) b5 = turn;
+                if (index == 6) b6 = turn;
+                if (index == 7) b7 = turn;
+                if (index == 8) b8 = turn;
+
+                checkWin();
+
+                if (turn == "O") {
+                    turn = "X";
+                } else {
+                    turn = "O";
+                }
+            }
+        }
+
+        function checkWin() {
+
+            if (b0 != "" && b0 == b1 && b1 == b2) win(b0);
+            else if (b3 != "" && b3 == b4 && b4 == b5) win(b3);
+            else if (b6 != "" && b6 == b7 && b7 == b8) win(b6);
+
+            else if (b0 != "" && b0 == b3 && b3 == b6) win(b0);
+            else if (b1 != "" && b1 == b4 && b4 == b7) win(b1);
+            else if (b2 != "" && b2 == b5 && b5 == b8) win(b2);
+
+            else if (b0 != "" && b0 == b4 && b4 == b8) win(b0);
+            else if (b2 != "" && b2 == b4 && b4 == b6) win(b2);
+
+            else if (b0 != "" && b1 != "" && b2 != "" &&
+                b3 != "" && b4 != "" && b5 != "" &&
+                b6 != "" && b7 != "" && b8 != "") {
+                alert("Draw");
+                reset();
+            }
+        }
+
+        function win(player) {
+            alert(player + " wins ");
+            reset();
+        }
+
+        function reset() {
+
+            b0 = b1 = b2 = b3 = b4 = b5 = b6 = b7 = b8 = "";
+
+            let cells = document.getElementsByTagName("td");
+
+            for (let i = 0; i < cells.length; i++) {
+                cells[i].innerHTML = "";
+            }
+
+            turn = "O";
+        }
+    </script>
+
+</body>
+
+</html>

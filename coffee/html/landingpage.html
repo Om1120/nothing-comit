@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Om's Coffy</title>
+
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: #fafafa;
+            scroll-behavior: smooth;
+        }
+
+        .navbar {
+            background: linear-gradient(90deg, #4b2c20, #5b2d18);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .navbar a {
+            color: white !important;
+            margin-left: 15px;
+            transition: 0.3s;
+        }
+
+        .navbar a:hover {
+            color: #ffc107 !important;
+            transform: scale(1.05);
+        }
+
+        .logo {
+            color: #ffc107;
+            font-weight: bold;
+            font-size: 26px;
+            letter-spacing: 2px;
+        }
+
+        .hero {
+            background: linear-gradient(to right, #5b2d18, #3e1f12);
+            color: white;
+            padding: 100px 0;
+        }
+
+        .hero h1 {
+            font-size: 65px;
+            font-weight: bold;
+            line-height: 1.2;
+        }
+
+        .hero p {
+            font-size: 18px;
+            opacity: 0.9;
+        }
+
+        .hero span {
+            color: #ffc107;
+        }
+
+        .hero img {
+            border-radius: 20px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+            transition: 0.4s;
+        }
+
+        .hero img:hover {
+            transform: scale(1.05);
+        }
+
+        .btn-warning {
+            background: #ffc107;
+            border: none;
+            font-weight: bold;
+            padding: 10px 20px;
+            transition: 0.3s;
+        }
+
+        .btn-warning:hover {
+            background: #ffca2c;
+            transform: translateY(-3px);
+        }
+
+        .popular {
+            background: #5b2d18;
+            padding: 80px 0;
+            color: white;
+        }
+
+        .card {
+            border: none;
+            border-radius: 25px;
+            overflow: hidden;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            transition: 0.4s;
+        }
+
+        .card:hover {
+            transform: translateY(-10px) scale(1.02);
+        }
+
+        .card img {
+            height: 280px;
+            object-fit: cover;
+        }
+
+        .price {
+            color: #ffc107;
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        .shop {
+            padding: 70px 0;
+            background: #f8f8f8;
+        }
+
+        .shop img {
+            width: 100px;
+            height: 100px;
+            border-radius: 20px;
+            transition: 0.3s;
+        }
+
+        .shop img:hover {
+            transform: scale(1.1);
+        }
+
+        .shop h6 {
+            margin-top: 10px;
+            font-weight: bold;
+        }
+
+        .big-text {
+            padding: 100px 0;
+            text-align: center;
+        }
+
+        .big-text h1 {
+            font-size: 50px;
+            color: #5b2d18;
+            line-height: 1.4;
+        }
+
+        .testimonial {
+            padding: 100px 0;
+            background: #f5f5f5;
+            text-align: center;
+        }
+
+        .testimonial h2 {
+            font-size: 40px;
+            color: #5b2d18;
+            margin-bottom: 50px;
+        }
+
+        .testimonial-card {
+            background: white;
+            padding: 30px;
+            border-radius: 25px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: 0.3s;
+        }
+
+        .testimonial-card:hover {
+            transform: translateY(-8px);
+        }
+
+        .quote {
+            font-size: 40px;
+            color: #ffc107;
+        }
+
+        .features {
+            background: linear-gradient(to right, #ffc107, #ffb300);
+            padding: 100px 0;
+        }
+
+        .features h5 {
+            color: #5b2d18;
+            font-weight: bold;
+        }
+
+        .features p {
+            font-size: 15px;
+        }
+
+        .page {
+            padding: 90px 0;
+        }
+
+        .page h2 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #5b2d18;
+            font-weight: bold;
+        }
+
+        form input,
+        form textarea {
+            border-radius: 10px;
+            border: 1px solid #ddd;
+        }
+
+        form input:focus,
+        form textarea:focus {
+            border-color: #ffc107;
+            box-shadow: none;
+        }
+
+        footer {
+            background: #5b2d18;
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand logo" href="#">OM'S COFFY</a>
+
+            <button class="navbar-toggler bg-warning" data-bs-toggle="collapse" data-bs-target="#menu">Menu</button>
+
+            <div class="collapse navbar-collapse" id="menu">
+                <ul class="navbar-nav ms-auto text-center">
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#blog">Blog</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+                <a href="https://www.folgerscoffee.com/coffee/articles/types-of-coffee">
+                    <button class="btn btn-warning ms-lg-3 mt-3 mt-lg-0">Type of coffee</button>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="container">
+            <div class="row align-items-center text-center text-lg-start">
+                <div class="col-lg-6 col-md-6 col-12 mb-4">
+                    <h1><span>COFFEE</span> LIFE'S BEGINNING</h1>
+                    <p>Discover rich aroma, premium beans and handcrafted coffee made with love.</p>
+                   <a href="https://www.folgerscoffee.com/coffee/articles/types-of-coffee" class="btn btn-warning mt-3">Type's</a>
+                </div>
+                <div class="col-lg-6 col-md-6 col-12">
+                    <img src="../img/front.png" class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="popular">
+        <div class="container">
+            <h2 class="text-center mb-5">POPULAR FLAVORS</h2>
+
+            <div class="row">
+
+                <div class="col-lg-4 col-md-6 col-12 mb-4">
+                    <a href="https://lordpetrickindia.com/product-detail/hazelnut-iced-cappuccino"
+                        style="text-decoration: none; color: inherit;">
+                        <div class="card">
+                            <img src="../img/ihl.jpg" class="card-img-top">
+                            <div class="card-body text-center">
+                                <p class="price">$18.99</p>
+                                <h5>ICED HAZELNUT LATTE</h5>
+                                <p>Rich hazelnut taste with smooth creamy finish.</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-lg-4 col-md-6 col-12 mb-4">
+                    <a href="https://www.amazon.in/Colombian-Brew-Coffee-Colombain-Arabica/dp/B07QHM7YQY"
+                        style="text-decoration: none; color: inherit;">
+                        <div class="card">
+                            <img src="../img/cc.png" class="card-img-top">
+                            <div class="card-body text-center">
+                                <p class="price">$16.99</p>
+                                <h5>COLD BREW</h5>
+                                <p>Slow brewed for bold and refreshing flavor.</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-lg-4 col-md-6 col-12 mb-4">
+                    <a href="https://zarraffas.com/products/mocha-fusion"
+                        style="text-decoration: none; color: inherit;">
+                        <div class="card">
+                            <img src="../img/mf.jpg" class="card-img-top">
+                            <div class="card-body text-center">
+                                <p class="price">$12.99</p>
+                                <h5>MOCHA FUSION</h5>
+                                <p>Perfect blend of chocolate and coffee.</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="shop">
+        <div class="container text-center">
+            <div class="row">
+                <div class="col-lg-2 col-md-4 col-6 mb-4"><img src="../img/dr.webp">
+                    <h6>DARK ROAST</h6>
+                </div>
+                <div class="col-lg-2 col-md-4 col-6 mb-4"><img src="../img/mr.jpg">
+                    <h6>MEDIUM ROAST</h6>
+                </div>
+                <div class="col-lg-2 col-md-4 col-6 mb-4"><img src="../img/cp.webp">
+                    <h6>COCO</h6>
+                </div>
+                <div class="col-lg-2 col-md-4 col-6 mb-4"><img src="../img/milk.png">
+                    <h6>MILK</h6>
+                </div>
+                <div class="col-lg-2 col-md-4 col-6 mb-4"><img src="../img/sugar.jpg">
+                    <h6>SUGAR</h6>
+                </div>
+                <div class="col-lg-2 col-md-4 col-6 mb-4"><img src="../img/cream.jpg">
+                    <h6>CREAM</h6>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="big-text">
+        <div class="container">
+            <h1>WE BELIEVE COFFEE'S MORE THAN A DRINK. IT'S AN EXPERIENCE.</h1>
+        </div>
+    </section>
+
+    <section class="testimonial">
+        <div class="container">
+            <h2>OUR CUSTOMERS LOVE US</h2>
+
+            <div class="row">
+                <div class="col-lg-4 col-md-6 col-12 mb-4">
+                    <div class="testimonial-card">
+                        <div class="quote">“</div>
+                        <p>Best coffee ever. I love the taste and aroma!</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-12 mb-4">
+                    <div class="testimonial-card">
+                        <div class="quote">“</div>
+                        <p>Amazing service and premium quality coffee.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-12 mb-4">
+                    <div class="testimonial-card">
+                        <div class="quote">“</div>
+                        <p>Highly recommend for coffee lovers!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="features">
+        <div class="container">
+            <div class="row align-items-center text-center text-lg-start">
+
+                <!-- LEFT SIDE -->
+                <div class="col-lg-3 mb-4">
+                    <h5>PREMIUM QUALITY</h5>
+                    <p>FINEST BEANS SELECTED GLOBALLY.</p>
+
+                    <h5 class="mt-4">PREMIUM TASTE</h5>
+                    <p>TASTE IS WORLD BEST.</p>
+                </div>
+
+                <!-- CENTER IMAGE -->
+                <div class="col-lg-6 mb-4 text-center">
+                    <img src="../img/bigb.jpg" class="img-fluid rounded">
+                </div>
+
+                <!-- RIGHT SIDE -->
+                <div class="col-lg-3">
+                    <h5>FRESH ALWAYS</h5>
+                    <p>FRESHLY BRUUUUUED AND DELIVERED.</p>
+
+                    <h5 class="mt-4">PREMIUM AND FRESH INGREDIENTS</h5>
+                    <p>USE ONLY PREMIUM AND FRESH INGREDIENTS IN SHOP.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="page" id="about">
+        <div class="container">
+            <h2>About Us</h2>
+            <p class="text-center">"More than just a caffeine fix,Om's coffy was born out of a love for our
+                neighborhood. We believe that the best conversations happen over a steaming mug. Whether you’re here to
+                tackle a deadline, catch up with an old friend, or simply enjoy a moment of quiet, our doors are open.
+                We’re proud to be your local living room."</p>
+        </div>
+    </section>
+
+    <section class="page bg-light" id="blog">
+        <div class="container">
+            <h2>Blog</h2>
+
+            <div class="row">
+                <div class="col-lg-4 col-md-6 col-12 mb-4">
+                    <a href="https://maps.app.goo.gl/djzh4RXFuAZXEjWw8" style="text-decoration: none; color: inherit;">
+                        <div class="card">
+                            <img src="../img/cr.webp" class="card-img-top">
+                            <div class="card-body">
+                                <h5>Recipe</h5>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-lg-4 col-md-6 col-12 mb-4">
+                    <a href="https://maps.app.goo.gl/Kz81MbVKwWAZ2trc8" style="text-decoration: none; color: inherit;">
+                        <div class="card">
+                            <img src="../img/cf.webp" class="card-img-top">
+                            <div class="card-body">
+                                <h5>Coffee Farm</h5>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-lg-4 col-md-6 col-12 mb-4">
+                    <a href="https://maps.app.goo.gl/iPMm418h7dZQ1KXi8" style="text-decoration: none; color: inherit;">
+                        <div class="card">
+                            <img src="../img/cs.webp" class="card-img-top">
+                            <div class="card-body">
+                                <h5>Place</h5>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="page" id="contact">
+        <div class="container">
+            <h2>Contact</h2>
+
+            <form class="w-100 w-md-75 w-lg-50 mx-auto">
+                <input type="text" class="form-control mb-3" placeholder="Name">
+                <input type="email" class="form-control mb-3" placeholder="Email">
+                <textarea class="form-control mb-3" rows="4" placeholder="Message"></textarea>
+                <button class="btn btn-warning w-100">Send</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2026 Om's Coffy</p>
+    </footer>
+
+    <script src="../js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

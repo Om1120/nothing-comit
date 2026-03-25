@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Menu</title>
+
+    <style>
+        body {
+            background: #f5f5f5;
+            color: #222;
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        h1 {
+            text-align: center;
+            position: sticky;
+            top: 0;
+            background: #ffffff;
+            padding: 15px;
+            z-index: 1000;
+            font-size: 32px;
+            border-bottom: 2px solid #ddd;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .main-container {
+            display: flex;
+            gap: 30px;
+            padding: 25px;
+        }
+
+        .demo {
+            display: flex;
+            gap: 25px;
+            margin: 30px 0 0 30px;
+        }
+
+        .card {
+            width: 220px;
+            height: 370px;
+            background: #ffffff;
+            padding: 15px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 12px;
+        }
+
+        .card h3 {
+            margin: 10px 0;
+        }
+
+        .price {
+            color: #333;
+            font-weight: bold;
+        }
+
+        span {
+            color: green;
+            font-size: 18px;
+        }
+
+        button {
+            margin-top: 5px;
+            padding: 7px 12px;
+            border: none;
+            background: #ff9800;
+            color: white;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #e68900;
+        }
+
+        .qty-box {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 10px;
+        }
+
+        .qty {
+            font-weight: bold;
+        }
+
+        .cart-box {
+            width: 300px;
+            background: #ffffff;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 100px;
+        }
+
+        .cart-box h2 {
+            text-align: center;
+        }
+
+        .cart-item {
+            display: flex;
+            justify-content: space-between;
+            background: #f1f1f1;
+            padding: 8px;
+            border-radius: 8px;
+            margin-bottom: 5px;
+        }
+
+        .discount-buttons {
+            display: flex;
+            gap: 10px;
+            margin: 10px 0;
+        }
+
+        .discount-buttons button {
+            background: crimson;
+        }
+
+        .clear-btn {
+            background: crimson;
+            width: 100%;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>FOOD ORDER</h1>
+
+    <div class="main-container">
+        <div class="menu-setion">
+
+            <!-- ROW 1 -->
+            <div class="demo">
+                <div class="card">
+                    <img src="image/Vada pav recipe.jpg">
+                    <h3>Cheese Vada Pav</h3>
+                    <p class="price"><strike>₹80</strike><br><span>₹50</span></p>
+                    <div class="qty-box">
+                        <button onclick="removeItem('vadapav')">−</button>
+                        <span class="qty" id="vadapavqty">0</span>
+                        <button onclick="addItem('vadapav')">+</button>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="image/b.jpg">
+                    <h3>Veggie Burger</h3>
+                    <p class="price"><strike>₹100</strike><br><span>₹50</span></p>
+                    <div class="qty-box">
+                        <button onclick="removeItem('burger')">−</button>
+                        <span class="qty" id="burgerqty">0</span>
+                        <button onclick="addItem('burger')">+</button>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="image/pizza2.jpg">
+                    <h3>Farmhouse Pizza</h3>
+                    <p class="price"><strike>₹399</strike><br><span>₹300</span></p>
+                    <div class="qty-box">
+                        <button onclick="removeItem('pizza')">−</button>
+                        <span class="qty" id="pizzaqty">0</span>
+                        <button onclick="addItem('pizza')">+</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ROW 2 -->
+            <div class="demo">
+                <div class="card">
+                    <img src="image/sandwich.jpg">
+                    <h3>Grilled Sandwich</h3>
+                    <p class="price"><strike>₹299</strike><br><span>₹199</span></p>
+                    <div class="qty-box">
+                        <button onclick="removeItem('sandwich')">−</button>
+                        <span class="qty" id="sandwichqty">0</span>
+                        <button onclick="addItem('sandwich')">+</button>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="image/pasta🍲🍲🍲.jpg">
+                    <h3>White Sauce Pasta</h3>
+                    <p class="price"><strike>₹100</strike><br><span>₹80</span></p>
+                    <div class="qty-box">
+                        <button onclick="removeItem('pasta')">−</button>
+                        <span class="qty" id="pastaqty">0</span>
+                        <button onclick="addItem('pasta')">+</button>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="image/noodles.jpg">
+                    <h3>Hakka Noodles</h3>
+                    <p class="price"><strike>₹150</strike><br><span>₹110</span></p>
+                    <div class="qty-box">
+                        <button onclick="removeItem('noodles')">−</button>
+                        <span class="qty" id="noodlesqty">0</span>
+                        <button onclick="addItem('noodles')">+</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ROW 3 -->
+            <div class="demo">
+                <div class="card">
+                    <img src="image/smosa.jpg">
+                    <h3>Punjabi Samosa</h3>
+                    <p class="price"><strike>₹75</strike><br><span>₹55</span></p>
+                    <div class="qty-box">
+                        <button onclick="removeItem('samosa')">−</button>
+                        <span class="qty" id="samosaqty">0</span>
+                        <button onclick="addItem('samosa')">+</button>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="image/dabeli.webp">
+                    <h3>Kutch Dabeli</h3>
+                    <p class="price"><strike>₹80</strike><br><span>₹50</span></p>
+                    <div class="qty-box">
+                        <button onclick="removeItem('dabeli')">−</button>
+                        <span class="qty" id="dabeliqty">0</span>
+                        <button onclick="addItem('dabeli')">+</button>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="image/coffee.jpg">
+                    <h3>Cold Coffee</h3>
+                    <p class="price"><strike>₹120</strike><br><span>₹90</span></p>
+                    <div class="qty-box">
+                        <button onclick="removeItem('coffee')">−</button>
+                        <span class="qty" id="coffeeqty">0</span>
+                        <button onclick="addItem('coffee')">+</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="cart-box">
+            <h2>Cart List</h2>
+            <div id="cart"></div>
+
+            <p id="total"><b>Total:</b> ₹0.00</p>
+            <p><b>GST:</b> 18%</p>
+            <p id="gross"><b>Gross Amount:</b> ₹0.00</p>
+
+            <div class="discount-buttons">
+                <button onclick="setdiscount(10)">10%</button>
+                <button onclick="setdiscount(20)">20%</button>
+                <button onclick="setdiscount(30)">30%</button>
+            </div>
+
+            <p id="net"><b>Net Amount:</b> ₹0.00</p>
+            <button class="clear-btn" onclick="clearcart()">Clear Cart</button>
+        </div>
+
+    </div>
+
+    <script>
+        let qty = { vadapav: 0, burger: 0, frenchfries: 0, sandwich: 0, pasta: 0, samosa: 0, pizza: 0, bhel: 0, dabeli: 0, noodles: 0, coffee: 0 };
+
+        const prices = { vadapav: 50, burger: 50, frenchfries: 120, sandwich: 199, pasta: 80, samosa: 55, pizza: 300, bhel: 50, dabeli: 50, noodles: 110, coffee: 90 };
+
+        let discount = 0;
+
+        function addItem(item) { qty[item]++; updateCart(); }
+        function removeItem(item) { if (qty[item] > 0) { qty[item]--; updateCart(); } }
+
+        function setdiscount(val) { discount = val; updateCart(); }
+
+        function clearcart() {
+            for (let item in qty) { qty[item] = 0; }
+            discount = 0;
+            updateCart();
+        }
+
+        function updateCart() {
+            let cart = document.getElementById("cart");
+            cart.innerHTML = "";
+            let total = 0;
+
+            for (let item in qty) {
+                if (document.getElementById(item + "qty")) {
+                    document.getElementById(item + "qty").innerText = qty[item];
+                }
+
+                if (qty[item] > 0) {
+                    let cost = qty[item] * prices[item];
+                    total += cost;
+
+                    cart.innerHTML += `<div class="cart-item">
+<span>${item} x ${qty[item]}</span>
+<span>₹${cost.toFixed(2)}</span>
+</div>`;
+                }
+            }
+
+            document.getElementById("total").innerHTML = `<b>Total:</b> ₹${total.toFixed(2)}`;
+            let gst = total * 0.18;
+            let gross = total + gst;
+
+            document.getElementById("gross").innerHTML = `<b>Gross Amount:</b> ₹${gross.toFixed(2)}`;
+            let net = gross - (gross * discount / 100);
+
+            document.getElementById("net").innerHTML = `<b>Net Amount:</b> ₹${net.toFixed(2)}`;
+        }
+    </script>
+
+</body>
+
+</html>
