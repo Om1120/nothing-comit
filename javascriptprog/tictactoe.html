@@ -10,8 +10,9 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        flex-direction: column;
         height: 100vh;
-        background: #f4f4f4;
+        background: #0b0b0b;
         font-family: Arial;
         margin: 0;
     }
@@ -23,22 +24,68 @@
     td {
         width: 90px;
         height: 90px;
-        background: white;
-        border: 2px solid #333;
+        background: #111;
+        border: 2px solid #ff2e63;
         text-align: center;
         font-size: 40px;
         font-weight: bold;
         cursor: pointer;
+        color: #00ff9f;
+        box-shadow: 0 0 10px #ff2e63;
     }
 
     td:hover {
-        background: #ddd;
+        background: #1a1a1a;
+         border: 2px solid #00ff9f;
+        box-shadow: 0 0 20px #00ff9f;
+    }
+
+    h1 {
+        color: #ff2e63;
+        text-shadow: 0 0 15px #ff2e63;
+    }
+
+    h1:hover {
+        color: #00ff9f;
+        text-shadow: 0 0 20px #00ff9f;
+    }
+
+    #result {
+        margin-top: 20px;
+        font-size: 26px;
+        color: #00ff9f;
+        font-weight: bold;
+        text-shadow: 0 0 10px #00ff9f;
+    }
+
+    button {
+        margin-top: 15px;
+        padding: 10px 25px;
+        font-size: 18px;
+        background: transparent;
+        color: #ff2e63;
+        border: 2px solid #ff2e63;
+        cursor: pointer;
+        border-radius: 5px;
+        transition: 0.3s;
+        box-shadow: 0 0 10px #ff2e63;
+    }
+
+    button:hover {
+        background: #00ff9f;
+         border: 2px solid #00ff9f;
+        color: black;
+        box-shadow: 0 0 20px #00ff9f;
     }
 </style>
 
 <body>
-
     <table>
+        <tr>
+            <th colspan="3">
+                <h1>Tick Tack Toe</h1>
+            </th>
+        </tr>
         <tr>
             <td onclick="play(this,0)"></td>
             <td onclick="play(this,1)"></td>
@@ -55,6 +102,10 @@
             <td onclick="play(this,8)"></td>
         </tr>
     </table>
+
+    <div id="result"></div>
+
+    <button onclick="reset()">Restart Game</button>
 
     <script>
         let turn = "O";
@@ -79,10 +130,10 @@
 
                 checkWin();
 
-                if (turn == "O") {
-                    turn = "X";
-                } else {
+                if (turn == "X") {
                     turn = "O";
+                } else {
+                    turn = "X";
                 }
             }
         }
@@ -103,14 +154,14 @@
             else if (b0 != "" && b1 != "" && b2 != "" &&
                 b3 != "" && b4 != "" && b5 != "" &&
                 b6 != "" && b7 != "" && b8 != "") {
-                alert("Draw");
-                reset();
+                document.getElementById("result").innerHTML = "Draw";
+                setTimeout(reset, 1500);
             }
         }
 
         function win(player) {
-            alert(player + " wins ");
-            reset();
+            document.getElementById("result").innerHTML = player + " wins";
+            setTimeout(reset, 2500);
         }
 
         function reset() {
@@ -122,6 +173,8 @@
             for (let i = 0; i < cells.length; i++) {
                 cells[i].innerHTML = "";
             }
+
+            document.getElementById("result").innerHTML = "";
 
             turn = "O";
         }
